@@ -1,0 +1,4 @@
+{
+    "port":"8080",
+    "dburl":"mongodb://localhost/comp313_CCMS"
+}

@@ -257,6 +257,12 @@ a:hover {
 .mar-top40 {
 	margin-top: 40px;
 }
+.mar-top50 {
+	margin-top: 50px;
+}
+.mar-top60 {
+	margin-top: 60px;
+}
 
 
 /* bottom */
@@ -289,6 +295,13 @@ a:hover {
 .mar-bot40 {
 	margin-bottom: 40px;
 }
+.mar-bot50 {
+	margin-bottom: 50px;
+}
+.mar-bot60 {
+	margin-bottom: 60px;
+}
+
 
 
 /*===========================
@@ -297,7 +310,7 @@ a:hover {
 
 section.section {
 	margin:0;
-	padding: 80px 0 60px 0;
+	padding: 50px 0 50px 0;
 }
 
 .bg-white {
@@ -631,7 +644,7 @@ section#footer {
 	margin: 0;
 	color: #fff;
 	clear: both;
-	/*margin-top: 700px;*/
+	margin-top: 100px;
 	bottom: 0;
 }
 
@@ -805,4 +818,21 @@ Media queries
 .formInput
 {
 	height: 50px;
+}
+
+
+
+
+/* ========================================
+	Form general
+========================================= */
+
+textarea
+{
+	resize: vertical;
+}
+
+.formTextArea
+{
+	height: 200px;!important;
 }

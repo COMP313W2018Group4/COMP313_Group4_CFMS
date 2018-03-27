@@ -27,6 +27,14 @@ router.get('/signup', function(req, res, next)
     res.render("signup", {data:feed});
 });
 
+//Complaint GET Route
+router.get('/feedback', function(req, res, next)
+{
+    var feed={};
+    feed.msg= "signup";
+    res.render("feedback", {data:feed});
+});
+
 
 //---------------PASSPORT CONFIG-----------------
 // used to serialize the user for the session

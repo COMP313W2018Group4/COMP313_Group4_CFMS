@@ -1,9 +1,9 @@
 <% include partials/header.ejs %>
 
 <section class="section"></section>
-<main class="container mar-top60 mar-bot60">
+<main class="container mar-top60 mar-bot50">
     <div class="col-lg-12 mar-bot30">
-        <h1 class="text-center text-uppercase">User Registration</h1>
+        <h1 class="text-center text-uppercase">Feedback</h1>
         <hr>
     </div>
 
@@ -14,14 +14,14 @@
             <label class="cols-sm-2 control-label">First Name</label>
             <div class="input-group ">
                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                <input type="text" class="form-control formInput" name="firstname"  placeholder="Enter your first name"/>
+                <input type="text" class="form-control formInput" name="firstname"  value=""/>
             </div>
         </div>
         <div class="form-group col-lg-4">
             <label class="cols-sm-2 control-label">Last Name</label>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                <input type="text" class="form-control formInput" name="lastname" placeholder="Enter your last name"/>
+                <input type="text" class="form-control formInput" name="lastname"  value=""/>
             </div>
         </div>
         <div class="col-lg-2"></div>
@@ -32,48 +32,52 @@
             <label class="cols-sm-2 control-label">Email</label>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                <input type="email" class="form-control formInput" name="email"  placeholder="Enter your email"/>
+                <input type="email" class="form-control formInput" name="email" value=""/>
             </div>
         </div>
         <div class="form-group col-lg-4">
-            <label class="cols-sm-2 control-label">Role</label>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                <select class="form-control formInput" name="role">
-                    <option>Customer</option>
-                    <option>Customer Service Rep</option>
-                    <option>Admin</option>
-
-                </select>
-            </div>
+            <label class="cols-sm-2 control-label">Date</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                    <input type="datetime-local" class="form-control formInput" name="date"  value=""/>
+                </div>
         </div>
         <div class="col-lg-2"></div>
 
         <!--Row-->
         <div class="col-lg-2 clear"></div>
         <div class="form-group col-lg-4">
-            <label class="cols-sm-2 control-label">Password</label>
+            <label class="cols-sm-2 control-label">Company</label>
             <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
-                <input type="password" class="form-control formInput" name="password"  placeholder="Enter your password"/>
+                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                <select class="form-control formInput" name="role">
+                    <option>Company A</option>
+                    <option>Company B</option>
+                    <option>Company C</option>
+
+                </select>
             </div>
         </div>
-        <div class="form-group col-lg-4">
-            <label class="cols-sm-2 control-label">Confirm Password</label>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
-                <input type="password" class="form-control formInput" name="password"  placeholder="Confirm password"/>
-            </div>
+
+        <div class="col-lg-2"></div>
+
+        <!--Row-->
+        <div class="col-lg-2 clear"></div>
+        <div class="form-group col-lg-8">
+            <label class="cols-sm-2 control-label">Message</label>
+            <textarea class="formTextArea form-control formInput " name="feedback" style="height: 150px" placeholder="Enter your message..." required></textarea>
         </div>
+
         <div class="col-lg-2"></div>
 
         <div class="col-lg-2 clear"></div>
 
         <div class="col-lg-8">
-            <button type="button" class="btn btn-primary btn-lg btn-block mar-top30 text-uppercase">Sign up</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block mar-top30 text-uppercase">Submit</button>
         </div>
         <div class="col-lg-2"></div>
     </form>
 </main>
+
 <section class="section"></section>
 <% include partials/footer.ejs %>

@@ -77,10 +77,11 @@
     });
   }
 
-  $(".navbar-collapse a").on('click', function() {
-  $(".navbar-collapse").removeClass('in');
-  $(".navbar-collapse").addClass('collapse');
-  });
+  // $(".navbar-collapse a").on('click', function()
+  // {
+  // $(".navbar-collapse").removeClass('in');
+  // $(".navbar-collapse").addClass('collapse');
+  // });
 
   // fancybox
   jQuery(".fancybox").fancybox();

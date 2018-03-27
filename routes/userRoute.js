@@ -14,9 +14,19 @@ const userModel=require("../model/userModel");
 //Index GET Route
 router.get('/', function(req, res, next)
 {
-    var ret={};
-    res.render("index", {data:ret});
+    var feed={};
+    feed.msg="home";
+    res.render("index", {data:feed});
 });
+
+//Signup GET Route
+router.get('/signup', function(req, res, next)
+{
+    var feed={};
+    feed.msg= "signup";
+    res.render("signup", {data:feed});
+});
+
 
 //---------------PASSPORT CONFIG-----------------
 // used to serialize the user for the session

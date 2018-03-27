@@ -8,16 +8,73 @@
     <title>CCMS</title>
 
     <!-- CSS section -->
-
     <link rel="stylesheet" href="public/css/bootstrap.css">
-    <link rel="stylesheet" href="public/css/overwrite.css">
+    <link rel="stylesheet" href="public/css/isotope.css">
     <link rel='stylesheet' href='public/css/style.css'>
-    <link rel="stylesheet" href="public/css/default.css">
-    <link rel="stylesheet" href="public/css/flexslider.css" type="text/css">
-    <link rel="stylesheet" href="public/js/fancybox/jquery.fancybox.css" type="text/css" media="screen">
-    <link rel="stylesheet" type="text/css" href="public/css/isotope.css" media="screen">
+    <link rel='stylesheet' href='public/css/font-awesome.css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
+
+    <link rel='stylesheet' href='public/css/style.css'>
 
 </head>
 <body>
+<!--Navbar-->
+<section id="header" class="appear"></section>
+<div class="navbar navbar-fixed-top " role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.7);" data-300="line-height:60px; height:60px; background-color:rgba(0, 0, 0, 0.7);">
+    <div class="container navBarCustom">
+        <!--Logo-->
+        <div class="navbar-header">
+            <div class="navbar-logo">
+                <a href="/"><img src="public/img/logo.png" alt="CCMS logo"></a>
+            </div>
+        </div>
+
+        <!--Menu-->
+        <ul class="nav navbar-nav " id="nav" data-0="margin-top:30px;" data-300="margin-top:5px;" >
+
+            <!--Navbar menu items visible based on displayed page-->
+            <%
+                if(data.msg=="home")
+                {%>
+                    <li class="active"><a href="#header">Home</a></li>
+                    <li class=""><a href="#section-about">About</a></li>
+                    <li class=""><a href="#section-contact">Contact</a></li>
+                <%}
+                else
+                {%>
+                    <li class="active"><a href="/">Home</a></li>
+                <%}
+            %>
+
+            <!--Login Dropdown (includes form)-->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Log in<span class="caret"></span></a>
+                <ul id="login-dp" class="dropdown-menu pull-right ">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="form" role="form" method="POST" action="login" accept-charset="UTF-8" id="login-nav">
+                                    <div class="form-group">
+                                        <!--<label class="sr-only" for="exampleInputEmail2">Email Address</label>-->
+                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email Address" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <!--<label class="sr-only" for="exampleInputPassword2">Password</label>-->
+                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="bottom text-center">
+                                New here? <a href="/signup"><b>Sign Up</b></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
 

@@ -29,19 +29,19 @@ const userSchema= new schema({
         type:String,
         minlength:3, /* built in validator  */
     },
-    feedback:
+    role:
     {
         type:String,
-        minlength:3, /* built in validator  */
+        enum: ['admin', 'customer', 'customer_rep']
     }
 
 },
 {
-    collection: "customer"
+    collection: "users"
 });
 
 //Create a model
-const User= mongoose.model("user", userSchema);
+const user= mongoose.model("User", userSchema);
 
 //Export the model
-module.exports=User;
+module.exports=user;

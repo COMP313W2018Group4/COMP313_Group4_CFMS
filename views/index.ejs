@@ -1,68 +1,4 @@
 <% include partials/header.ejs %>
-  
-  <!--Site under development-->
-
-  <section id="header" class="appear"></section>
-
-  <!--Navbar-->
-  <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.5);" data-300="line-height:60px; height:60px; background-color:rgba(5, 42, 62, 1);">
-    <div class="container navBarCustom">
-      <div class="navbar-header">
-        <!--Mobile Devices-->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      	  <span class="fa fa-bars color-white"></span>
-        </button>
-        <!--Logo-->
-        <div class="navbar-logo">
-          <a href="/"><img data-0="width:155px;" data-300=" width:120px;" src="public/img/logo.png" alt="CCMS logo"></a>
-        </div>
-      </div>
-      <div class="navbar-collapse collapse">
-        <!--Menu-->
-        <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-
-            <li class="active"><a href="/">Home</a></li>
-
-            <li><a href="#section-about">About</a></li>
-
-            <li><a href="#section-contact">Contact</a></li>
-
-            <!--Login Dropdown (includes form)-->
-            <li class="dropdown">
-                <a href="" class="dropdown-toggle" data-toggle="dropdown">Log in<span class="caret"></span></a>
-                    <ul id="login-dp" class="dropdown-menu">
-                        <li>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form class="form" role="form" method="POST" action="login" accept-charset="UTF-8" id="login-nav">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail2">Email Address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email Address" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                        <div class="help-block text-right"><a href="">Forgot Password ?</a></div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="bottom text-center">
-                                New here ? <a href="#"><b>Join Us</b></a>
-                            </div>
-                        </div>
-                        </li>
-                    </ul>
-            </li>
-
-            <li><a href="#section-signup">Signup</a></li>
-        </ul>
-
-      </div>
-    </div>
-  </div>
 
   <!--Carousel-->
   <section id="intro">
@@ -217,6 +153,8 @@
     </div>
   </section> -->
 
+
+  <section class="section"></section>
   <!-- about -->
   <section id="section-about" class="section appear clearfix">
     <div class="container">

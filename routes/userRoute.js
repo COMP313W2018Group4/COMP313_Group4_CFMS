@@ -7,7 +7,7 @@ const router = express.Router();
 const bodyparser = require('body-parser');
 const urlencodedparser = bodyparser.urlencoded({extended:false});
 const passport = require('passport');
-//Defines the User model
+const controller = require('../controller/controller')
 const userModel=require("../model/userModel");
 
 
@@ -19,19 +19,22 @@ router.get('/', function(req, res, next)
     res.render("index", {data:feed});
 });
 
+//--------------------SIGNUP----------------------
 //Signup GET Route
 router.get('/signup', function(req, res, next)
 {
     var feed={};
-    feed.msg= "signup";
     res.render("signup", {data:feed});
 });
+//Signup POST Route
+router.post('/signup', urlencodedparser, controller.insert);
 
-//Complaint GET Route
+
+//------------------FEEDBACK-----------------------
+//Feedback GET Route
 router.get('/feedback', function(req, res, next)
 {
     var feed={};
-    feed.msg= "signup";
     res.render("feedback", {data:feed});
 });
 

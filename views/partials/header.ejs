@@ -8,20 +8,21 @@
     <title>CCMS</title>
 
     <!-- CSS section -->
+    <link rel='stylesheet' href='public/css/style.css'>
     <link rel="stylesheet" href="public/css/bootstrap.css">
     <link rel="stylesheet" href="public/css/isotope.css">
     <link rel='stylesheet' href='public/css/style.css'>
     <link rel='stylesheet' href='public/css/font-awesome.css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
 
-    <link rel='stylesheet' href='public/css/style.css'>
+
 
 </head>
 <body>
 <!--Navbar-->
 <section id="header" class="appear"></section>
-<div class="navbar navbar-fixed-top " role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.7);" data-300="line-height:60px; height:60px; background-color:rgba(0, 0, 0, 0.7);">
-    <div class="container navBarCustom">
+<div class="navbar fixed-top navbar-expand-lg">
+    <div class="container navBarCustom navbar-inner">
         <!--Logo-->
         <div class="navbar-header">
             <div class="navbar-logo">
@@ -30,26 +31,25 @@
         </div>
 
         <!--Menu-->
-        <ul class="nav navbar-nav " id="nav" data-0="margin-top:30px;" data-300="margin-top:5px;" >
-
+        <ul class="navbar-nav navbar-right" id="nav">
             <!--Navbar menu items visible based on displayed page-->
             <%
                 if(data.msg=="home")
                 {%>
-                    <li class="active"><a href="#header">Home</a></li>
-                    <li class=""><a href="#section-about">About</a></li>
-                    <li class=""><a href="#section-contact">Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#header">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
                 <%}
                 else
                 {%>
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
                 <%}
             %>
 
             <!--Login Dropdown (includes form)-->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">Log in<span class="caret"></span></a>
-                <ul id="login-dp" class="dropdown-menu pull-right ">
+            <li class="dropdown nav-item">
+                <a class="dropdown-toggle nav-link " data-toggle="dropdown" href="">Log in<span class="caret"></span></a>
+                <ul class="login-dp dropdown-menu float-left">
                     <li>
                         <div class="row">
                             <div class="col-md-12">
@@ -67,7 +67,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="bottom text-center">
+                            <div class="col-md-12 bottom text-center signUp">
                                 New here? <a href="/signup"><b>Sign Up</b></a>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-# COMP313_Group4_CCMS
+# COMP313_Group4_CFMS
 Customer feedback management system
 
 - Download or clone from "branch1_John", master branch is updated when team reaches a milestone.

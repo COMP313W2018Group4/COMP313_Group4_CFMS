@@ -1,7 +1,7 @@
 {
   "name": "comp313_ccms",
   "version": "1.0.0",
-  "description": "Customer complaint management stystem",
+  "description": "Customer feedback management stystem",
   "main": "app.js",
   "scripts": {
     "start": "npm update && node app.js"

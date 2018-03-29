@@ -1,0 +1,103 @@
+<% include partials/header.ejs %>
+
+<section class="section skipNavbar"></section>
+<main class="container mar-top40 mar-bot40">
+    <div class="col-lg-12 mar-bot30">
+        <h1 class="text-center text-uppercase">User Registration</h1>
+        <hr>
+    </div>
+
+    <%
+        if (data.msg!=null)
+        {%>
+            <div class="alert alert-info" role="alert">
+                <%=data.msg%>
+            </div>
+        <%}
+        else
+         {%>
+            <div></div>
+        <%}
+
+     %>
+
+
+    <form method="post" class="signUpForm">
+        <!--Row-->
+        <div class="row">
+            <div class="form-group col-lg-4 offset-2">
+                <label class="cols-sm-2 control-label">First Name</label>
+                <div class="input-group ">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="text" class="form-control formInput" name="firstname"  required autofocus placeholder="Enter your first name"/>
+                </div>
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="cols-sm-2 control-label">Last Name</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="text" class="form-control formInput" name="lastname" required placeholder="Enter your last name"/>
+                </div>
+            </div>
+        </div>
+
+        <!--Row-->
+        <div class="row">
+            <div class="form-group col-lg-4 offset-2">
+                <label class="cols-sm-2 control-label">Email</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="email" class="form-control formInput" name="email" required placeholder="Enter your email"/>
+                </div>
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="cols-sm-2 control-label">Role</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                    </div>
+                    <select class="form-control formInput" name="role" style="height: 50px">
+                        <option>Customer</option>
+                        <option>Customer Service Rep</option>
+                        <option>Admin</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!--Row-->
+        <div class="row">
+            <div class="form-group col-lg-4 offset-2">
+                <label class="cols-sm-2 control-label">Password</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="password" class="form-control formInput" name="password" required placeholder="Enter your password"/>
+                </div>
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="cols-sm-2 control-label">Confirm Password</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="password" class="form-control formInput" name="confirmPass" required placeholder="Confirm password"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 ">
+            <button type="submit" class="btn btn-primary btn-lg btn-block mar-top30 text-uppercase col-lg-4 offset-sm-4 signupBtn" formaction="/signup">Sign up</button>
+        </div>
+
+    </form>
+</main>
+<section class="section"></section>
+<% include partials/footer.ejs %>

@@ -1,0 +1,4 @@
+{
+    "port":"80",
+    "dburl":"mongodb://<dbuser>:<dbpassword>@ds121099.mlab.com:21099/comp313_2018_group4"
+}

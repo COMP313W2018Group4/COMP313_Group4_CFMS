@@ -1,4 +1,14 @@
-(function($) {
+(function($)
+{
+  // Based on button click decide which form to submit
+  $('button.loginBtn').click(function()
+    {
+      $('form.loginForm').submit();
+   });
+  $('button.signupBtn').click(function()
+  {
+      $('form.signUpForm').submit();
+  });
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {

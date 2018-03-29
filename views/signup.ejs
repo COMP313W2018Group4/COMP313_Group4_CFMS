@@ -8,16 +8,21 @@
     </div>
 
     <%
-        if (data.msg!="")
+        if (data.msg!=null)
         {%>
-            <!--<div class="alert alert-info" role="alert">-->
-                <!--<%=data.msg%>-->
-            <!--</div>-->
+            <div class="alert alert-info" role="alert">
+                <%=data.msg%>
+            </div>
         <%}
+        else
+         {%>
+            <div></div>
+        <%}
+
      %>
 
 
-    <form method="post">
+    <form method="post" class="signUpForm">
         <!--Row-->
         <div class="row">
             <div class="form-group col-lg-4 offset-2">
@@ -89,7 +94,7 @@
         </div>
 
         <div class="col-lg-12 ">
-            <button type="submit" class="btn btn-primary btn-lg btn-block mar-top30 text-uppercase col-lg-4 offset-sm-4">Sign up</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block mar-top30 text-uppercase col-lg-4 offset-sm-4 signupBtn" formaction="/signup">Sign up</button>
         </div>
 
     </form>

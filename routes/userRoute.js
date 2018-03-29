@@ -11,19 +11,24 @@ const controller = require('../controller/controller')
 const userModel=require("../model/userModel");
 
 
-//Index GET Route
+//---------------------HOME-----------------------
 router.get('/', function(req, res, next)
 {
-    var feed={};
+    const feed = {};
     feed.msg="home";
     res.render("index", {data:feed});
 });
+
+//--------------------LOGIN-----------------------
+//Login POST Route
+router.post('/', urlencodedparser, controller.auth);
+router.post('/login', urlencodedparser, controller.auth);
 
 //--------------------SIGNUP----------------------
 //Signup GET Route
 router.get('/signup', function(req, res, next)
 {
-    var feed={};
+    const feed = {};
     res.render("signup", {data:feed});
 });
 //Signup POST Route
@@ -32,9 +37,9 @@ router.post('/signup', urlencodedparser, controller.insert);
 
 //------------------FEEDBACK-----------------------
 //Feedback GET Route
-router.get('/feedback', function(req, res, next)
+router.get('/feedback', controller.reqAuth, function(req, res, next)
 {
-    var feed={};
+    const feed = {};
     res.render("feedback", {data:feed});
 });
 

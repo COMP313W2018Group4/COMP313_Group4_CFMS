@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 //Description: This files handles all the incoming and outgoing routes
 
 //Required modules
@@ -8,10 +7,9 @@ const bodyparser = require('body-parser');
 const urlencodedparser = bodyparser.urlencoded({extended:false});
 const passport = require('passport');
 const controller = require('../controller/controller')
-const userModel=require("../model/userModel");
 
 
-//---------------------HOME-----------------------
+//--------------------HOME-----------------------
 router.get('/', function(req, res, next)
 {
     const feed = {};
@@ -35,12 +33,20 @@ router.get('/signup', function(req, res, next)
 router.post('/signup', urlencodedparser, controller.insert);
 
 
-//------------------FEEDBACK-----------------------
+//--------------------FEEDBACK--------------------
 //Feedback GET Route
 router.get('/feedback', controller.reqAuth, function(req, res, next)
 {
     const feed = {};
-    res.render("feedback", {data:feed});
+    feed.msg="feedback";
+    res.render("feedback",
+    {
+        firstname: req.session.user.firstname,
+        lastname: req.session.user.lastname,
+        email: req.session.user.email,
+        data: feed
+    });
+    console.log("Autofill completed");
 });
 
 

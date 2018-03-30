@@ -5,8 +5,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CCMS</title>
-
+    <title>CFMS</title>
+    <link rel="icon" type="image/png" href="public/img/favicon.png">
     <!-- CSS section -->
     <link rel='stylesheet' href='public/css/style.css'>
     <link rel="stylesheet" href="public/css/bootstrap.css">
@@ -14,9 +14,6 @@
     <link rel='stylesheet' href='public/css/style.css'>
     <link rel='stylesheet' href='public/css/font-awesome.css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
-
-
-
 </head>
 <body>
 <!--Navbar-->
@@ -39,41 +36,75 @@
                     <li class="nav-item active"><a class="nav-link" href="#header">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+                    <!--Login Dropdown (includes form)-->
+                    <li class="dropdown nav-item">
+                        <a class="dropdown-toggle nav-link " data-toggle="dropdown" href="">Log in<span class="caret"></span></a>
+                        <ul class="login-dp dropdown-menu float-left">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form loginForm" method="POST">
+                                            <div class="form-group">
+                                                <!--<label class="sr-only" for="exampleInputEmail2">Email Address</label>-->
+                                                <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <!--<label class="sr-only" for="exampleInputPassword2">Password</label>-->
+                                                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block loginBtn" formaction="/login">Log In</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-12 bottom text-center signUp">
+                                        New here? <a href="/signup"><b>Sign Up</b></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 <%}
-                else
+                else if(data.msg=="feedback")
                 {%>
-                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Log out</a></li>
+               <%}
+               else
+               {%>
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <!--Login Dropdown (includes form)-->
+                    <li class="dropdown nav-item">
+                        <a class="dropdown-toggle nav-link " data-toggle="dropdown" href="">Log in<span class="caret"></span></a>
+                        <ul class="login-dp dropdown-menu float-left">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form loginForm" method="POST">
+                                            <div class="form-group">
+                                                <!--<label class="sr-only" for="exampleInputEmail2">Email Address</label>-->
+                                                <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <!--<label class="sr-only" for="exampleInputPassword2">Password</label>-->
+                                                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block loginBtn" formaction="/login">Log In</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-12 bottom text-center signUp">
+                                        New here? <a href="/signup"><b>Sign Up</b></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 <%}
             %>
 
-            <!--Login Dropdown (includes form)-->
-            <li class="dropdown nav-item">
-                <a class="dropdown-toggle nav-link " data-toggle="dropdown" href="">Log in<span class="caret"></span></a>
-                <ul class="login-dp dropdown-menu float-left">
-                    <li>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form class="form loginForm" method="POST">
-                                    <div class="form-group">
-                                        <!--<label class="sr-only" for="exampleInputEmail2">Email Address</label>-->
-                                        <input type="email" class="form-control" name="email" placeholder="Email Address" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <!--<label class="sr-only" for="exampleInputPassword2">Password</label>-->
-                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block loginBtn" formaction="/login">Log In</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-md-12 bottom text-center signUp">
-                                New here? <a href="/signup"><b>Sign Up</b></a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </li>
+
         </ul>
     </div>
 </div>

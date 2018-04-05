@@ -376,6 +376,21 @@ section.section {
 	background-color: white;
 	color: #1b1e21;
 }
+
+.logoutBtn
+{
+	background-color: transparent;
+	color: white;
+	border-radius: 0;
+	height: 41px;
+}
+
+.logoutBtn:hover
+{
+	background-color: #858585;
+	border-radius: 0;
+	height: 41px;
+}
 /*===========================
   --- Intro ----
 =========================== */

@@ -9,7 +9,7 @@ const passport = require('passport');
 const controller = require('../controller/controller')
 
 
-//--------------------HOME-----------------------
+//---------------------HOME------------------------
 router.get('/', function(req, res, next)
 {
     const feed = {};
@@ -17,10 +17,14 @@ router.get('/', function(req, res, next)
     res.render("index", {data:feed});
 });
 
-//--------------------LOGIN-----------------------
+//--------------------LOG IN-----------------------
 //Login POST Route
 router.post('/', urlencodedparser, controller.auth);
 router.post('/login', urlencodedparser, controller.auth);
+
+//--------------------LOG OUT-----------------------
+//Logout POST Route
+router.post('/logout', controller.logout);
 
 //--------------------SIGNUP----------------------
 //Signup GET Route

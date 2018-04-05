@@ -91,4 +91,11 @@ const auth= function(req, res)
         }
     });
 };
-module.exports= {"insert": insert, "auth": auth, "reqAuth": reqAuth};
+
+//Logout
+const logout= function (req, res)
+{
+    req.logOut();
+    res.redirect('/');
+}
+module.exports= {"insert": insert, "auth": auth, "reqAuth": reqAuth, "logout": logout};

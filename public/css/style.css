@@ -75,6 +75,17 @@ a:hover {
 /*==========================================================================
   Misc & Adjust
  ========================================================================== */
+
+.hi-icon-effect-5 .hi-icon {
+	color: #0588cb;
+	box-shadow: 0 0 0 4px #0588cb;
+}
+
+.no-touch .hi-icon-effect-5 .hi-icon:hover {
+	background: #85b0be;
+	box-shadow: 0 0 0 8px #95cbdd;
+}
+
 .row {
 	z-index: 9999;
 }

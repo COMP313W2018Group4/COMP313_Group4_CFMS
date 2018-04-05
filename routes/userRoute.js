@@ -10,7 +10,7 @@ const controller = require('../controller/controller')
 
 
 //---------------------HOME------------------------
-router.get('/', function(req, res, next)
+router.get('/', function(req, res)
 {
     const feed = {};
     feed.msg="home";
@@ -28,18 +28,18 @@ router.post('/logout', controller.logout);
 
 //--------------------SIGNUP----------------------
 //Signup GET Route
-router.get('/signup', function(req, res, next)
+router.get('/signup', function(req, res)
 {
     const feed = {};
     res.render("signup", {data:feed});
 });
 //Signup POST Route
-router.post('/signup', urlencodedparser, controller.insert);
+router.post('/signup', urlencodedparser, controller.insertUser);
 
 
 //--------------------FEEDBACK--------------------
 //Feedback GET Route
-router.get('/feedback', controller.reqAuth, function(req, res, next)
+router.get('/feedback', controller.reqAuth, function(req, res)
 {
     const feed = {};
     feed.msg="feedback";
@@ -52,7 +52,8 @@ router.get('/feedback', controller.reqAuth, function(req, res, next)
     });
     console.log("Autofill completed");
 });
-
+//Feedback POST Route
+router.post('/feedback', controller.reqAuth, urlencodedparser, controller.insertFeedback);
 
 //---------------PASSPORT CONFIG-----------------
 // used to serialize the user for the session

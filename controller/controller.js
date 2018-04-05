@@ -1,5 +1,5 @@
 const userModel=require("../model/userModel");
-
+const feedbackModel=require("../model/feedbackModel");
 
 //Function to check if the user is authenticated
 const reqAuth= function requireAuth(req, res, next)
@@ -16,8 +16,8 @@ const reqAuth= function requireAuth(req, res, next)
 }
 
 
-//Insert into db (Signup form)
-const insert= function (req, res)
+//Insert user into db (Signup form)
+const insertUser= function (req, res)
 {
     //Add user to DB
     const feed={};
@@ -39,6 +39,34 @@ const insert= function (req, res)
 
 };
 
+//Insert feedback into db (feedback form)
+const insertFeedback = function (req, res)
+{
+    const feed={};
+    const newFeedback = new feedbackModel(req.body);
+    newFeedback.save(function (err)
+    {
+        if(err)
+        {
+            feed.msg=err.message;
+            console.log(err);
+        }else
+        {
+            feed.msg= "Feedback submitted successfully";
+            console.log("feedback added to database");
+            feed.msg="feedback";
+            feed.rel="Thank you for your feedback. Our customer service team will be in touch with you shortly."
+            res.render("feedback",
+            {
+                firstname: req.session.user.firstname,
+                lastname: req.session.user.lastname,
+                email: req.session.user.email,
+                data: feed
+            });
+        }
+
+    })
+}
 
 //Search DB for user for authentication
 const auth= function(req, res)
@@ -98,4 +126,5 @@ const logout= function (req, res)
     req.logOut();
     res.redirect('/');
 }
-module.exports= {"insert": insert, "auth": auth, "reqAuth": reqAuth, "logout": logout};
+
+module.exports= {"insertUser": insertUser, "auth": auth, "reqAuth": reqAuth, "logout": logout, "insertFeedback": insertFeedback};

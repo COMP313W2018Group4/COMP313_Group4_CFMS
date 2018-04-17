@@ -13,7 +13,7 @@ cd client
 npm install (if modules are not installed)
 ng serve
 ```
-Navigate to `http://localhost:4200/` on your browser. The server will automatically reload if you change any of the source files.
+* Navigate to `http://localhost:4200/` on your browser. The server will automatically reload if you change any of the source files.
 
 * To build the Angular app:
 ```

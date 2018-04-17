@@ -1,0 +1,61 @@
+<div class="navbar fixed-top navbar-expand-lg">
+  <div class="container navBarCustom navbar-inner">
+    <!--Logo-->
+    <div class="navbar-header">
+      <div class="navbar-logo">
+        <a routerLink="/"><img src="../../assets/images/logo.png" alt="CCMS logo"></a>
+      </div>
+    </div>
+    <!--Menu-->
+    <ul class="nav navbar-nav navbar-right" id="nav">
+      <!--Navbar menu items visible based on displayed page-->
+      <div>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link">Home</a>
+        </li>
+      </div>
+      <!-- <div *ngIf="user"> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+        </li>
+      <!-- </div> -->
+      <!-- <div *ngIf="user"> -->
+        <li class="nav-item">
+          <a class="nav-link" href="" routerLinkActive="active-link">Logout</a>
+        </li>
+      <!-- </div> -->
+
+      <div *ngIf="!user">
+        <!--Login Dropdown (includes form)-->
+        <li class="dropdown nav-item">
+          <a class="dropdown-toggle nav-link " data-toggle="dropdown" href="">Log in<span class="caret"></span></a>
+          <ul class="login-dp dropdown-menu float-left">
+            <li>
+              <div class="row">
+                <div class="col-md-12">
+                  <form class="form loginForm">
+                    <div class="form-group">
+                      <input type="email" class="form-control"  placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control"  placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block loginBtn">Log In</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-12 bottom text-center signUp">
+                  New here? <a routerLink="/register"><b class="text-CFMS">Register</b></a>
+                  <div  class="mar-top20 mar-bot10">
+                    <!-- <span class="text-danger font-weight-bold text-uppercase">{{errorMessage}}</span> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>

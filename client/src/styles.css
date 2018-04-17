@@ -1,1 +1,472 @@
-/* You can add global styles to this file, and also import other style files */
+/*==========================================================================
+  General
+  ========================================================================== */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+small {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #e6e6e6;
+}
+
+:focus {
+  outline: none;
+}
+
+.text-shadow {
+  text-shadow: 0 3px 7px #0000008f;
+}
+
+.t-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white
+{
+  color: white;
+}
+
+.text-CFMS
+{
+  color: #25aae1;
+}
+
+/*==========================================================================
+  Misc & Adjust
+ ========================================================================== */
+
+.hi-icon-effect-5 .hi-icon {
+  color: #0588cb;
+  box-shadow: 0 0 0 4px #0588cb;
+}
+
+.no-touch .hi-icon-effect-5 .hi-icon:hover {
+  background: #85b0be;
+  box-shadow: 0 0 0 8px #95cbdd;
+}
+
+.row {
+  z-index: 9999;
+}
+
+.big {
+  font-size: 20pt;
+  font-weight: 300;
+}
+
+
+.blink:hover {
+  opacity: 0.9;
+}
+
+.half-offset {
+  margin-bottom: 75px !important;
+}
+
+.no-offset {
+  margin: 0 !important;
+  padding: 0;
+}
+
+.content,.container {
+  overflow: hidden;
+}
+
+.trans {
+  border: 0 !important;
+  background: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.nobg {
+  background: 0;
+  border: 0;
+}
+
+.noborder {
+  border: 0 !important;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.theme-bg {
+  background-color: #ff7701 !important;
+}
+
+.normalize-font-top {
+  padding-top: 25px;
+}
+
+
+/* --- align --- */
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+
+/* ---- padding ---- */
+/* top */
+.pad-top0 {
+  padding-top: 0;
+}
+.pad-top5 {
+  padding-top: 5px;
+}
+
+.pad-top10 {
+  padding-top: 10px;
+}
+
+.pad-top15 {
+  padding-top: 15px;
+}
+.pad-top20 {
+  padding-top: 20px;
+}
+.pad-top25 {
+  padding-top: 25px;
+}
+.pad-top30 {
+  padding-top: 30px;
+}
+.pad-top35 {
+  padding-top: 35px;
+}
+.pad-top40 {
+  padding-top: 40px;
+}
+/* bottom */
+.pad-bot0 {
+  padding-bottom: 0;
+}
+.pad-bot5 {
+  padding-bottom: 5px;
+}
+
+.pad-bot10 {
+  padding-bottom: 10px;
+}
+
+.pad-bot15 {
+  padding-bottom: 15px;
+}
+.pad-bot20 {
+  padding-bottom: 20px;
+}
+.pad-bot25 {
+  padding-bottom: 25px;
+}
+.pad-bot30 {
+  padding-bottom: 30px;
+}
+.pad-bot35 {
+  padding-bottom: 35px;
+}
+.pad-bot40 {
+  padding-bottom: 40px;
+}
+
+
+/* ---- margin --- */
+.mar-left5 { margin-left: 5px; }
+.mar-left10 { margin-left: 10px; }
+.mar-left15 { margin-left: 15px; }
+.mar-left20 { margin-left: 20px; }
+.mar-left25 { margin-left: 25px; }
+.mar-left30 { margin-left: 30px; }
+
+.mar-right5 { margin-right: 5px; }
+.mar-right10 { margin-right: 10px; }
+.mar-right15 { margin-right: 15px; }
+.mar-right20 { margin-right: 20px; }
+.mar-right25 { margin-right: 25px; }
+.mar-right30 { margin-right: 30px; }
+
+/* top */
+.mar-top0 {
+  margin-top: 0;
+}
+.mar-top5 {
+  margin-top: 5px;
+}
+
+.mar-top10 {
+  margin-top: 10px;
+}
+
+.mar-top15 {
+  margin-top: 15px;
+}
+.mar-top20 {
+  margin-top: 20px;
+}
+.mar-top25 {
+  margin-top: 25px;
+}
+.mar-top30 {
+  margin-top: 30px;
+}
+.mar-top35 {
+  margin-top: 35px;
+}
+.mar-top40 {
+  margin-top: 40px;
+}
+.mar-top50 {
+  margin-top: 50px;
+}
+.mar-top60 {
+  margin-top: 60px;
+}
+
+
+/* bottom */
+.mar-bot0 {
+  margin-bottom: 0;
+}
+.mar-bot5 {
+  margin-bottom: 5px;
+}
+
+.mar-bot10 {
+  margin-bottom: 10px;
+}
+
+.mar-bot15 {
+  margin-bottom: 15px;
+}
+.mar-bot20 {
+  margin-bottom: 20px;
+}
+.mar-bot25 {
+  margin-bottom: 25px;
+}
+.mar-bot30 {
+  margin-bottom: 30px;
+}
+.mar-bot35 {
+  margin-bottom: 35px;
+}
+.mar-bot40 {
+  margin-bottom: 40px;
+}
+.mar-bot50 {
+  margin-bottom: 50px;
+}
+.mar-bot60 {
+  margin-bottom: 60px;
+}
+
+/*===========================
+  --- Sections ----
+=========================== */
+
+section.section {
+  padding: 50px 0 50px 0;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+/* --- section heading --- */
+.section-header {
+  text-align: center;
+}
+.section-header h2.section-heading {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+/*===========================
+  --- Intro ----
+=========================== */
+
+#intro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /*background: url(../img/cx1.jpg) top center;*/
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  #intro {
+    background-attachment: fixed;
+  }
+}
+
+.intro-content {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-inner{
+  width:100%;
+  max-height: 600px !important;
+}
+
+.intro-text {
+  margin-top: 150px;
+}
+
+.intro-content  h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.intro-content  h3 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  #intro {
+    height: 100vh;
+  }
+  .intro-content  h2 {
+    font-size: 34px;
+  }
+}
+
+/*===========================
+  --- Navigation Bar ----
+=========================== */
+
+.navbar {
+  background-color: rgba(45, 45, 45, 0.85);
+}
+
+.nav-item a:hover
+{
+  background-color: #858585;
+}
+
+.active
+{
+  background-color: #858585;
+}
+
+.active-link{
+  background-color: #858585;
+}
+
+.nav-item a
+{
+  text-transform: uppercase;
+  color: white;
+}
+
+.skipNavbar
+{
+  margin-top: 70px;
+}
+
+.navbar-nav >li{
+  margin-left: 10px;
+}
+
+.nav-item a{
+  letter-spacing: 1.2px;
+}
+.dropdown-menu
+{
+  left: -200px;
+}
+
+.signUp a:hover
+{
+  background-color: white;
+  color: #1b1e21;
+}
+
+.logoutBtn
+{
+  background-color: transparent;
+  color: white;
+  border-radius: 0;
+  height: 41px;
+}
+
+.logoutBtn:hover
+{
+  background-color: #858585;
+  border-radius: 0;
+  height: 41px;
+}
+
+
+/* ========================================
+	Login Dropdown
+========================================= */
+
+.login-dp{
+  min-width: 250px;
+  padding: 14px 14px 0;
+  overflow:hidden;
+  background-color:rgba(255,255,255,.8);
+}
+.login-dp .help-block{
+  font-size:12px
+}
+.login-dp .bottom{
+  background-color:rgba(255,255,255,.8);
+  border-top:1px solid #ddd;
+  clear:both;
+  padding:14px;
+}
+.login-dp .social-buttons{
+  margin:12px 0
+}
+.login-dp .social-buttons a{
+  width: 49%;
+}
+.login-dp .form-group {
+  margin-bottom: 10px;
+}
+
+@media(max-width:768px){
+  #login-dp{
+    background-color: inherit;
+    color: #fff;
+  }
+  #login-dp .bottom{
+    background-color: inherit;
+    border-top:0 none;
+  }
+}
+.navBarCustom
+{
+  overflow:visible !important;
+}
+
+/* ========================================
+	Angular Form
+========================================= */
+

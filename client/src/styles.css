@@ -126,7 +126,6 @@ a:hover {
 .pad-top5 {
   padding-top: 5px;
 }
-
 .pad-top10 {
   padding-top: 10px;
 }
@@ -156,11 +155,9 @@ a:hover {
 .pad-bot5 {
   padding-bottom: 5px;
 }
-
 .pad-bot10 {
   padding-bottom: 10px;
 }
-
 .pad-bot15 {
   padding-bottom: 15px;
 }
@@ -197,79 +194,35 @@ a:hover {
 .mar-right30 { margin-right: 30px; }
 
 /* top */
-.mar-top0 {
-  margin-top: 0;
-}
-.mar-top5 {
-  margin-top: 5px;
-}
-
-.mar-top10 {
-  margin-top: 10px;
-}
-
-.mar-top15 {
-  margin-top: 15px;
-}
-.mar-top20 {
-  margin-top: 20px;
-}
-.mar-top25 {
-  margin-top: 25px;
-}
-.mar-top30 {
-  margin-top: 30px;
-}
-.mar-top35 {
-  margin-top: 35px;
-}
-.mar-top40 {
-  margin-top: 40px;
-}
-.mar-top50 {
-  margin-top: 50px;
-}
-.mar-top60 {
-  margin-top: 60px;
-}
+.mar-top0 {margin-top: 0;}
+.mar-top5 {margin-top: 5px;}
+.mar-top10 {margin-top: 10px;}
+.mar-top15 {margin-top: 15px;}
+.mar-top20 {margin-top: 20px;}
+.mar-top25 {margin-top: 25px;}
+.mar-top30 {margin-top: 30px;}
+.mar-top35 {margin-top: 35px;}
+.mar-top40 {margin-top: 40px;}
+.mar-top50 {margin-top: 50px;}
+.mar-top60 {margin-top: 60px;}
+.mar-top100 {margin-top: 100px;}
+.mar-top200 {margin-top: 200px;}
+.mar-top300 {margin-top: 300px;}
 
 
 /* bottom */
-.mar-bot0 {
-  margin-bottom: 0;
-}
-.mar-bot5 {
-  margin-bottom: 5px;
-}
-
-.mar-bot10 {
-  margin-bottom: 10px;
-}
-
-.mar-bot15 {
-  margin-bottom: 15px;
-}
-.mar-bot20 {
-  margin-bottom: 20px;
-}
-.mar-bot25 {
-  margin-bottom: 25px;
-}
-.mar-bot30 {
-  margin-bottom: 30px;
-}
-.mar-bot35 {
-  margin-bottom: 35px;
-}
-.mar-bot40 {
-  margin-bottom: 40px;
-}
-.mar-bot50 {
-  margin-bottom: 50px;
-}
-.mar-bot60 {
-  margin-bottom: 60px;
-}
+.mar-bot0 {margin-bottom: 0;}
+.mar-bot5 {margin-bottom: 5px;}
+.mar-bot10 {margin-bottom: 10px;}
+.mar-bot15 {margin-bottom: 15px;}
+.mar-bot20 {margin-bottom: 20px;}
+.mar-bot25 {margin-bottom: 25px;}
+.mar-bot30 {margin-bottom: 30px;}
+.mar-bot35 {margin-bottom: 35px;}
+.mar-bot40 {margin-bottom: 40px;}
+.mar-bot50 {margin-bottom: 50px;}
+.mar-bot60 {margin-bottom: 60px;}
+.mar-bot100 {margin-bottom: 100px;}
 
 /*===========================
   --- Sections ----
@@ -470,3 +423,7 @@ section.section {
 	Angular Form
 ========================================= */
 
+.form-text
+{
+  font-size: 0.8em;
+}

@@ -1,0 +1,89 @@
+<main class="container mar-top200 mar-bot40">
+  <div class="col-lg-12 mar-bot30">
+    <h1 class="display-4 text-center">User Registration</h1>
+    <hr>
+  </div>
+
+  <div class="row show-hide-message">
+    <div [ngClass]="messageClass">
+      {{message}}
+    </div>
+  </div>
+
+  <form class="form signUpForm" [formGroup]="form"  #userForm="ngForm" (ngSubmit)="registerUser()">
+
+    <div class="form-group col-lg-6 offset-3">
+      <label class="cols-sm-2 control-label">First Name</label>
+      <div class="input-group ">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+        </div>
+        <input type="text" class="form-control formInput" formControlName="firstName" placeholder="Enter your first name" required autofocus />
+      </div>
+      <div *ngIf="!form.controls['firstName'].valid && form.controls['firstName'].touched">
+        <p class="form-text text-danger">
+          First name is required and must be more than 3 characters
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group col-lg-6 offset-3">
+      <label class="cols-sm-2 control-label">Last Name</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+        </div>
+        <input type="text" class="form-control formInput"  formControlName="lastName" placeholder="Enter your last name" required/>
+      </div>
+      <div *ngIf="!form.controls['lastName'].valid && form.controls['lastName'].touched">
+        <p class="form-text text-danger">
+          Last name is required and must be more than 3 characters
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group col-lg-6 offset-3">
+      <label class="cols-sm-2 control-label">Email</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+        </div>
+        <input type="email" class="form-control formInput" formControlName="email" placeholder="Enter your email" required/>
+      </div>
+      <div *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
+        <p class="form-text text-danger">
+          Email is required and must match an email address format
+        </p>
+      </div>
+
+    </div>
+
+    <div formGroupName="passwords">
+      <div class="form-group col-lg-6 offset-3">
+        <label class="cols-sm-2 control-label">Password</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+          </div>
+          <input type="password" class="form-control formInput" formControlName="password" placeholder="Enter your password" required />
+        </div>
+      </div>
+
+      <div class="form-group col-lg-6 offset-3">
+      <label class="cols-sm-2 control-label">Confirm Password</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+        </div>
+        <input type="password" class="form-control formInput" formControlName="confirmPass" placeholder="Confirm password" required />
+      </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <button type="submit" class="btn btn-primary btn-lg btn-block text-uppercase col-lg-6 offset-3 mar-top60  signupBtn" [disabled]="!form.valid">Register</button>
+    </div>
+  </form>
+</main>
+
+

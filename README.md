@@ -22,9 +22,9 @@ npm install (if modules are not installed)
 ng build 
 ```
 
-* Angular builds are exported into public folder of the server app 
+* Angular builds are exported into dist directory of the client
 ```
-./server/public/angular
+./client/dist 
 ```
 
 ### Express App

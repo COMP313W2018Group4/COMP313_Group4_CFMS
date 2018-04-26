@@ -12,5 +12,7 @@ router.post('/current-user/:id', accountController.currentUser);
 //Insert feedback
 router.post('/feedback', customerController.createFeedback);
 
+//Get all feedback count
+router.post('/all-feedback-count/:id', customerController.getAllFeedbackCount);
 
 module.exports=router;

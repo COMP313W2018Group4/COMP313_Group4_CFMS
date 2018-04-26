@@ -76,11 +76,6 @@ export class NewFeedbackComponent implements OnInit {
     });
   }
 
-  getFeedbackCount()
-  {
-    
-  }
-
   getCurrentUser()
   {
     this.accountService.getCurrentUser(this.user).subscribe(res=>

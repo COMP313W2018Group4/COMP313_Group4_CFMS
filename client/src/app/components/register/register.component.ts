@@ -59,10 +59,6 @@ export class RegisterComponent implements OnInit {
       {
         this.errorMessage= "Could not register user";
       }
-      else
-      {
-        this.errorMessage= "Could not register user";
-      }
     });
   }
 

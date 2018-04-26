@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {User} from "../../models/user";
+import { User } from "../../models/user";
+import { AccountService } from "../../services/account.service";
 
 
 @Component({
@@ -10,11 +11,13 @@ import {User} from "../../models/user";
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;
+  message;
+  errorMessage;
 
   // setup simple regex for white listed characters
   validCharacters = /[^\s\w,.:&\/()+%'`@-]/;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(private accountService: AccountService, private formBuilder: FormBuilder, private router: Router) {
     this.createForm();
   }
 
@@ -45,7 +48,18 @@ export class RegisterComponent implements OnInit {
       this.form.value.passwords.password
     );
 
-    // this.authService.register(student).subscribe(res => {});
+    this.accountService.register(student).subscribe(res =>
+    {
+      if (res.userId)
+      {
+        this.message= res.userId;
+        this.form.reset();
+      }
+      else
+      {
+        this.errorMessage= "Could not register user";
+      }
+    });
   }
 
   //Function to ensure passwords match
@@ -63,7 +77,6 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
-
 
   ngOnInit()
   {}

@@ -1,6 +1,6 @@
-const userModel = require("../model/userModel");
-const feedbackModel = require("../model/feedbackModel");
-const companyModel = require("../model/companyModel");
+const userModel = require("../model/user.model");
+const feedbackModel = require("../model/feedback.model");
+const companyModel = require("../model/company.model");
 
 //Function to check if the user is authenticated
 const reqAuth = function requireAuth(req, res, next) {
@@ -202,7 +202,8 @@ const createFeedback = function (req, res) {
 };
 
 const deleteFeedback = function (req, res, id) {
-    const feedback;
+    //commenting out as it gives error
+    //const feedback;
     feedbackModel.findById(id).exec((err, feed) => {
         if (err) {
             res.json({
@@ -288,7 +289,8 @@ const getAllCSR = function (req, res,id) {
 
 
 const deleteUser = function (req, res, id) {
-    const user;
+    //commenting for error
+    //const user;
     userModel.findById(id).exec((err, usr) => {
         if (err) {
             res.json({

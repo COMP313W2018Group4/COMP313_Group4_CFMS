@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ComplaintSchema = new Schema({
+var ComplaintSchema = new Schema(
+{
         complaintID: { type: String, unique: true, required: true },
         note: { type: String, required: true },
         date: { type: Date, required: true },
@@ -11,11 +12,10 @@ var ComplaintSchema = new Schema({
             ref: 'User'
         }
 
-    },
-
-    {
-        collection: "complaints"
-    });
+},
+{
+    collection: "complaints"
+});
 
 
 const complaint= mongoose.model("Complaint", ComplaintSchema);

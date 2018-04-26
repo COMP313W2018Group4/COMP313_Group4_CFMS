@@ -1,0 +1,97 @@
+<main class="container mar-top200 mar-bot40">
+  <div class="col-lg-12 mar-bot30">
+    <h1 class="display-4 text-center">New Feedback</h1>
+    <hr>
+  </div>
+
+  <!--<div *ngIf="message">
+    <div class="alert alert-primary col-lg-6 offset-3" role="alert">
+      You have successfully registered! Please log in.
+    </div>
+  </div>
+  <div *ngIf="errorMessage">
+    <div class="alert alert-primary col-lg-6 offset-3" role="alert">
+      Could not register user. Please try again.
+    </div>
+  </div>-->
+
+  <form class="form" [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+
+    <div class="row">
+      <div class="form-group col-lg-4 offset-2">
+        <label class="cols-sm-2 control-label">First Name</label>
+        <div class="input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+          </div>
+          <input type="text" class="form-control formInput" value="{{firstName}}" readonly/>
+        </div>
+      </div>
+
+      <div class="form-group col-lg-4">
+        <label class="cols-sm-2 control-label">Last Name</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+          </div>
+          <input type="text" class="form-control formInput"  value="{{lastName}}" readonly/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-lg-4 offset-2">
+        <label class="cols-sm-2 control-label">Email</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+          </div>
+          <input type="email" class="form-control formInput"  value="{{email}}" readonly/>
+        </div>
+      </div>
+
+      <div class="form-group col-lg-4">
+        <label class="cols-sm-2 control-label">Date</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="far fa-calendar-alt" aria-hidden="true"></i></span>
+          </div>
+          <input type="text" class="form-control formInput" formControlName="date" value="{{date}}" readonly/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="form-group col-lg-8 offset-2">
+      <label class="cols-sm-2 control-label">Company</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-building" aria-hidden="true"></i></span>
+        </div>
+        <select class="form-control" formControlName="company">
+          <option value="none" selected>Select a company</option>
+          <option *ngFor="let company of companies" >{{company.name}}</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="form-group col-lg-8 offset-2">
+      <label class="cols-sm-2 control-label">Comment</label>
+      <div class="input-group">
+        <textarea class="form-control" formControlName="feedback" rows="3"></textarea>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="col-lg-12">
+      <button type="submit" class="btn btn-primary btn-lg btn-block text-uppercase col-lg-6 offset-3 mar-top60 signupBtn">Submit</button>
+    </div>
+
+  </form>
+</main>
+
+

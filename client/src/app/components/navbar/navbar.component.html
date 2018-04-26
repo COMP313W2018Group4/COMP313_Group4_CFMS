@@ -14,16 +14,25 @@
           <a class="nav-link" routerLink="/home" routerLinkActive="active-link">Home</a>
         </li>
       </div>
-      <!-- <div *ngIf="user"> -->
+
+      <div *ngIf="user">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+          <a class="nav-link" routerLink="/customer/dashboard" routerLinkActive="active-link">Dashboard</a>
         </li>
-      <!-- </div> -->
-      <!-- <div *ngIf="user"> -->
+      </div>
+
+      <div *ngIf="user">
         <li class="nav-item">
-          <a class="nav-link" href="" routerLinkActive="active-link">Logout</a>
+          <a class="nav-link" href="" routerLinkActive="active-link" data-toggle="tooltip" title="Profile"><i class="fas fa-user mar-right10"></i>{{firstName}}</a>
         </li>
-      <!-- </div> -->
+      </div>
+
+      <div *ngIf="user">
+        <li class="nav-item">
+
+          <a class="nav-link" href="" routerLinkActive="active-link"><i class="fas fa-sign-out-alt mar-right10"></i>Logout</a>
+        </li>
+      </div>
 
       <div *ngIf="!user">
         <!--Login Dropdown (includes form)-->
@@ -33,12 +42,12 @@
             <li>
               <div class="row">
                 <div class="col-md-12">
-                  <form class="form loginForm">
+                  <form ngNativeValidate class="form loginForm" [formGroup]="form" (ngSubmit)="login()">
                     <div class="form-group">
-                      <input type="email" class="form-control"  placeholder="Email Address" required>
+                      <input type="email" class="form-control" formControlName="email" placeholder="Email Address" required>
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control"  placeholder="Password" required>
+                      <input type="password" class="form-control"  formControlName="password" placeholder="Password" required>
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary btn-block loginBtn">Log In</button>
@@ -47,8 +56,8 @@
                 </div>
                 <div class="col-md-12 bottom text-center signUp">
                   New here? <a routerLink="/register"><b class="text-CFMS">Register</b></a>
-                  <div  class="mar-top20 mar-bot10">
-                    <!-- <span class="text-danger font-weight-bold text-uppercase">{{errorMessage}}</span> -->
+                  <div  class="mar-top20 mar-bot10"  *ngIf="error">
+                     <span class="text-danger font-weight-bold text-uppercase">{{errorMessage}}</span>
                   </div>
                 </div>
               </div>

@@ -9,13 +9,21 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 
+import { AccountService } from './services/account.service';
+import { FeedbackService } from "./services/feedback.service";
+import { AdminService } from "./services/admin.service";
+import { DashboardCustomerComponent } from './components/customer/dashboard-customer/dashboard-customer.component';
+import { NewFeedbackComponent } from './components/customer/feedback/new-feedback/new-feedback.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardCustomerComponent,
+    NewFeedbackComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +32,11 @@ import { RegisterComponent } from './components/register/register.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AccountService,
+    FeedbackService,
+    AdminService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

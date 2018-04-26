@@ -3,9 +3,14 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const urlencodedparser = bodyParser.urlencoded({extended:false});
 const accountController= require('../controller/account.controller');
+const customerController= require('../controller/customer.controller');
 
 
-//Login
+//Get current user
 router.post('/current-user/:id', accountController.currentUser);
+
+//Insert feedback
+router.post('/feedback', customerController.createFeedback);
+
 
 module.exports=router;

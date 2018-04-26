@@ -10,7 +10,7 @@ export class FeedbackService {
 
   constructor(private http: HttpClient) { }
 
-  submitFeedback(userId: string, feedback: Feedback):Observable<any>
+  submitFeedback(feedback: Feedback):Observable<any>
   {
     const httpOptions = {headers: new HttpHeaders({
         'Accept': 'application/json',
@@ -18,6 +18,6 @@ export class FeedbackService {
         'responseType': 'application/json'
       })
     };
-    return this.http.post('customer/feedback', feedback, httpOptions).map(res=> {return res;});
+    return this.http.post('customer/feedback', feedback, httpOptions).map(res=> {return res});
   }
 }

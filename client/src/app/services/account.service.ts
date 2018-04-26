@@ -63,7 +63,7 @@ export class AccountService
         'responseType': 'application/json'
       })
     };
-    return this.http.post('http://localhost:3000/customer/current-user/'+ userId, httpOptions).map(res => {return res;});
+    return this.http.post('customer/current-user/'+ userId, httpOptions).map(res => {return res;});
   }
 
 }

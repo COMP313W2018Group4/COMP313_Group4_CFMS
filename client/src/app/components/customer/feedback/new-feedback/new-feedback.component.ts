@@ -18,6 +18,8 @@ export class NewFeedbackComponent implements OnInit {
   email;
   companies;
   date;
+  message;
+  errorMessage;
 
   constructor(private formBuilder: FormBuilder, private router: Router,
               private feedbackService: FeedbackService, private accountService: AccountService,
@@ -35,9 +37,8 @@ export class NewFeedbackComponent implements OnInit {
   {
       this.feedbackForm= this.formBuilder.group // Create Angular 2 Form when component loads
       ({
-        date: ['', Validators.required],
-        company: ['', Validators.required],
-        feedback: ['', Validators.required, Validators.minLength(10)]
+        company: [''],
+        feedback: ['']
       })
   }
 
@@ -49,14 +50,35 @@ export class NewFeedbackComponent implements OnInit {
 
   submitFeedback()
   {
+    console.log(this.feedbackForm.value.date+ " "+  this.feedbackForm.value.company+ " "+  this.feedbackForm.value.feedback);
     const feedback= new Feedback
     (
-      this. feedbackForm.value.date,
-      this. feedbackForm.value.company,
-      this. feedbackForm.value.feedback
+      this.user,
+      this.date,
+      this.feedbackForm.value.company,
+      this.feedbackForm.value.feedback
     );
 
-    this.feedbackService.submitFeedback(this.user, feedback).subscribe(res=>{});
+    this.feedbackService.submitFeedback(feedback).subscribe(res=>
+    {
+      if(res.feedback)
+      {
+        this.message= "success";
+        this.errorMessage=null;
+        this.feedbackForm.reset();
+        this.feedbackForm.value.date= this.date;
+      }
+      else
+      {
+        this.message=null;
+        this.errorMessage= "Failed to submit feedback";
+      }
+    });
+  }
+
+  getFeedbackCount()
+  {
+    
   }
 
   getCurrentUser()

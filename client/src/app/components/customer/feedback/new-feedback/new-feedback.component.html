@@ -4,18 +4,20 @@
     <hr>
   </div>
 
-  <!--<div *ngIf="message">
-    <div class="alert alert-primary col-lg-6 offset-3" role="alert">
-      You have successfully registered! Please log in.
+  <div *ngIf="message">
+    <div class="alert alert-primary col-lg-8 offset-2 alert-dismissible" role="alert">
+      <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
+      Your feedback has been submitted. Hold tight, out team will contact you soon.
     </div>
   </div>
   <div *ngIf="errorMessage">
-    <div class="alert alert-primary col-lg-6 offset-3" role="alert">
-      Could not register user. Please try again.
+    <div class="alert alert-danger col-lg-8 offset-2 alert-dismissible" role="alert">
+      <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
+      Failed to submit feedback. Please try again.
     </div>
-  </div>-->
+  </div>
 
-  <form class="form" [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+  <form ngNativeValidate class="form" [formGroup]="feedbackForm" #userForm="ngForm" (ngSubmit)="submitFeedback()">
 
     <div class="row">
       <div class="form-group col-lg-4 offset-2">
@@ -56,7 +58,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="far fa-calendar-alt" aria-hidden="true"></i></span>
           </div>
-          <input type="text" class="form-control formInput" formControlName="date" value="{{date}}" readonly/>
+          <input type="text" class="form-control formInput" value="{{date}}" readonly/>
         </div>
       </div>
     </div>
@@ -68,7 +70,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-building" aria-hidden="true"></i></span>
         </div>
-        <select class="form-control" formControlName="company">
+        <select class="form-control" formControlName="company" name="company" required>
           <option value="none" selected>Select a company</option>
           <option *ngFor="let company of companies" >{{company.name}}</option>
         </select>
@@ -81,14 +83,14 @@
     <div class="form-group col-lg-8 offset-2">
       <label class="cols-sm-2 control-label">Comment</label>
       <div class="input-group">
-        <textarea class="form-control" formControlName="feedback" rows="3"></textarea>
+        <textarea class="form-control" formControlName="feedback" ng-model="feedback" name="feedback" rows="3" required></textarea>
       </div>
     </div>
 
   </div>
 
     <div class="col-lg-12">
-      <button type="submit" class="btn btn-primary btn-lg btn-block text-uppercase col-lg-6 offset-3 mar-top60 signupBtn">Submit</button>
+      <button type="submit" class="btn btn-primary btn-lg btn-block text-uppercase col-lg-6 offset-3 mar-top60 signupBtn" [disabled]="!feedbackForm.valid">Submit Feedback</button>
     </div>
 
   </form>

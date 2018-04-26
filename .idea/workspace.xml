@@ -2,89 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9f9f44c-822c-4694-87a6-265022082c4e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/server/model/company.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.angular-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.angular-cli.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/components/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/register/register.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/components/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/register/register.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/models/feedback.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/models/feedback.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/routes/routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/routes/routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/model/companyModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/model/complaintModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/model/complaintModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/model/feedbackModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/model/feedback.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/model/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/model/user.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/icon-component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/isotope.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/codropsicons/codropsicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/codropsicons/codropsicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/codropsicons/codropsicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/codropsicons/codropsicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/codropsicons/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/ecoicons/ecoicon.dev.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/ecoicons/ecoicon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/ecoicons/ecoicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/ecoicons/ecoicon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/ecoicons/ecoicon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/flexslider/flexslider-icon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/flexslider/flexslider-icon.eot@" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/flexslider/flexslider-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/flexslider/flexslider-icon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/flexslider/flexslider-icon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/fontawesome/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/fontawesome/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/fontawesome/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/fontawesome/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/fontawesome/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/glyphicons-halflings-regular.eot@" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/Descr.WD3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/fancybox_loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/fancybox_loading_402x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/fancybox_overlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/fancybox_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/fancybox_sprite_402x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/fancybox/jquery.fancybox.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.appear.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.easing.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.flexslider-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.isotope.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.localScroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.nicescroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.scrollTo-1.4.3.1-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/jquery.scrollTo.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/modernizr-2.6.2-respond-1.1.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/skrollr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/stellar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/userRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views/feedback.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views/partials/footer.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views/partials/header.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views/signup.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/services/account.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/services/account.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/services/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/services/admin.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/services/feedback.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/services/feedback.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/account.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/account.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/model/feedback.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/model/feedback.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/model/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/model/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/customer.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/customer.route.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -97,76 +31,57 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7131783">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="admin.controller.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/server/controller/admin.controller.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="account.controller.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/server/controller/account.controller.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="674">
-                  <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#342#917#0" />
-                    <element signature="e#1097#1851#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="new-feedback.component.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="541">
-                  <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-                  <folding>
-                    <element signature="e#0#50#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="new-feedback.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="532">
-                  <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="account.controller.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/server/controller/account.controller.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="227">
-                  <caret line="89" column="22" selection-start-line="8" selection-end-line="8" selection-end-column="35" />
-                  <folding>
-                    <element signature="e#342#917#0" />
-                    <element signature="e#1097#1851#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="new-feedback.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-608">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+                <element signature="n#!!block;n#getAllCompanies#0;n#NewFeedbackComponent#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customer.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controller/customer.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controller/account.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-866">
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new-feedback.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-166">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+              <folding>
+                <element signature="e#331#338#1" expanded="true" />
+                <element signature="e#607#614#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>signU</find>
+      <find>Could not register user. Please try again.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,34 +103,36 @@
         <option value="$PROJECT_DIR$/client/src/index.html" />
         <option value="$PROJECT_DIR$/client/.angular-cli.json" />
         <option value="$PROJECT_DIR$/client/CFMS-app/.angular-cli.json" />
-        <option value="$PROJECT_DIR$/client/src/app/components/register/register.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/server/model/feedbackModel.js" />
-        <option value="$PROJECT_DIR$/server/model/user.model.js" />
         <option value="$PROJECT_DIR$/client/src/app/models/user.ts" />
         <option value="$PROJECT_DIR$/server/config/passport.js" />
         <option value="$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.css" />
         <option value="$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.ts" />
         <option value="$PROJECT_DIR$/client/src/styles.css" />
-        <option value="$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.html" />
-        <option value="$PROJECT_DIR$/client/src/app/models/feedback.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/components/register/register.component.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html" />
-        <option value="$PROJECT_DIR$/server/controller/account.controller.js" />
-        <option value="$PROJECT_DIR$/client/src/app/routes/routing.module.ts" />
         <option value="$PROJECT_DIR$/server/routes/account.route.js" />
-        <option value="$PROJECT_DIR$/server/routes/customer.route.js" />
-        <option value="$PROJECT_DIR$/client/src/app/services/account.service.ts" />
         <option value="$PROJECT_DIR$/server/model/companyModel.js" />
-        <option value="$PROJECT_DIR$/client/src/app/services/feedback.service.ts" />
         <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/client/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/services/admin.service.ts" />
         <option value="$PROJECT_DIR$/server/routes/admin.route.js" />
         <option value="$PROJECT_DIR$/server/controller/admin.controller.js" />
-        <option value="$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.html" />
+        <option value="$PROJECT_DIR$/client/src/app/routes/routing.module.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.html" />
+        <option value="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html" />
+        <option value="$PROJECT_DIR$/client/src/app/services/account.service.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/services/admin.service.ts" />
+        <option value="$PROJECT_DIR$/server/routes/customer.route.js" />
+        <option value="$PROJECT_DIR$/client/src/app/models/feedback.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/services/feedback.service.ts" />
+        <option value="$PROJECT_DIR$/server/model/feedback.model.js" />
+        <option value="$PROJECT_DIR$/server/controller/customer.controller.js" />
+        <option value="$PROJECT_DIR$/client/src/app/components/register/register.component.ts" />
+        <option value="$PROJECT_DIR$/server/model/user.model.js" />
+        <option value="$PROJECT_DIR$/server/controller/account.controller.js" />
+        <option value="$PROJECT_DIR$/client/src/app/components/register/register.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.html" />
       </list>
     </option>
   </component>
@@ -295,16 +212,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard-customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COMP313_Group4_CFMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COMP313_Group4_CFMS" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
               <item name="feedback" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -317,15 +224,6 @@
               <item name="customer" type="462c0819:PsiDirectoryNode" />
               <item name="feedback" type="462c0819:PsiDirectoryNode" />
               <item name="new-feedback" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COMP313_Group4_CFMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COMP313_Group4_CFMS" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="COMP313_Group4_CFMS" type="b2602c69:ProjectViewProjectNode" />
@@ -443,12 +341,12 @@
       <workItem from="1524625391264" duration="5952000" />
       <workItem from="1524631390213" duration="1547000" />
       <workItem from="1524676017844" duration="6404000" />
-      <workItem from="1524742334825" duration="16215000" />
+      <workItem from="1524742334825" duration="24923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46752000" />
+    <option name="totallyTimeSpent" value="55460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -462,7 +360,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32912722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24079916" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21135646" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -482,13 +380,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/components/register/register.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
@@ -602,13 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controller/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="359" lean-forward="true" selection-start-line="359" selection-end-line="359" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -626,51 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/register/register.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="48" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/model/feedback.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/models/user.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/models/feedback.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/register/register.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/config/passport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -682,50 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="244" column="16" selection-start-line="244" selection-start-column="16" selection-end-line="244" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/routes/routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/services/feedback.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/customer.route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -743,13 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="130" selection-start-line="16" selection-start-column="130" selection-end-line="16" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -760,37 +548,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/services/account.service.ts">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="65" column="49" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="49" />
+        <state relative-caret-position="328">
+          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/routes/routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="130" selection-start-line="16" selection-start-column="130" selection-end-line="16" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/services/admin.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/account.route.js">
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/dashboard-customer/dashboard-customer.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="69" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="69" />
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -801,44 +606,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/model/user.model.js">
+    <entry file="file://$PROJECT_DIR$/server/controller/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+        <state relative-caret-position="1681">
+          <caret line="182" selection-start-line="182" selection-end-line="202" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/controller/admin.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state>
+          <caret selection-end-line="28" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/models/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/models/feedback.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/model/feedback.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/services/feedback.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/customer.route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/register/register.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/model/user.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/services/account.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/account.route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+          <folding>
+            <element signature="e#336#343#1" expanded="true" />
+            <element signature="e#604#611#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/controller/account.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
-          <folding>
-            <element signature="e#342#917#0" />
-            <element signature="e#1097#1851#0" />
-          </folding>
+        <state relative-caret-position="-866">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/customer.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="-608">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+            <element signature="n#!!block;n#getAllCompanies#0;n#NewFeedbackComponent#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/customer/feedback/new-feedback/new-feedback.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="e#331#338#1" expanded="true" />
+            <element signature="e#607#614#1" expanded="true" />
           </folding>
         </state>
       </provider>

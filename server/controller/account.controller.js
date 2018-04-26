@@ -16,13 +16,13 @@ const register= function (req, res)
         if (err)
         {
             ret.msg= err.message;
-            res.json({ret});
             console.log(err)
+            return res.json({'error': err});
         }
         if (!retObj)
         {
             console.log("No user added");
-            return res.json({'user': null});
+            return res.json({'error': null});
         }
         else
         {

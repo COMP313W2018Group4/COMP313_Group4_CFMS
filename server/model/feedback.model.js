@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 
 const feedbackSchema = new Schema
 ({
-    email:
+    userId:
     {
-        type: String,
+        type:String,
         required: true
     },
     date:
@@ -19,7 +19,7 @@ const feedbackSchema = new Schema
         type: String,
         required: true
     },
-    note:
+    feedback:
     {
         type: String,
         required: true

@@ -55,6 +55,10 @@ export class RegisterComponent implements OnInit {
         this.message= res.userId;
         this.form.reset();
       }
+      if (res.error)
+      {
+        this.errorMessage= "Could not register user";
+      }
       else
       {
         this.errorMessage= "Could not register user";

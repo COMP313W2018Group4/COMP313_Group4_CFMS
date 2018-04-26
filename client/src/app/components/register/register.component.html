@@ -5,12 +5,15 @@
   </div>
 
   <div *ngIf="message">
-    <div class="alert alert-primary col-lg-6 offset-3" role="alert">
+    <div class="alert alert-primary col-lg-6 offset-3 alert-dismissible" role="alert">
+      <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
       You have successfully registered! Please log in.
     </div>
   </div>
+
   <div *ngIf="errorMessage">
-    <div class="alert alert-primary col-lg-6 offset-3" role="alert">
+    <div class="alert alert-danger col-lg-6 offset-3 alert-dismissible" role="alert">
+      <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
       Could not register user. Please try again.
     </div>
   </div>

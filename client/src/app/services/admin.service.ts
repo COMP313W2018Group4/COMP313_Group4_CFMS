@@ -18,7 +18,7 @@ export class AdminService {
         'responseType': 'application/json'
       })
     };
-    return this.http.post('http://localhost:3000/admin/getAllCompanies', httpOptions).map(res=> {return res;});
+    return this.http.post('admin/getAllCompanies', httpOptions).map(res=> {return res;});
   }
 
 }

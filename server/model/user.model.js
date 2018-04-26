@@ -23,6 +23,7 @@ const userSchema= new schema({
         type:String, 
         required:true,/* built in validator  */
         minlength:3, /* built in validator  */
+        unique: true
     },
     password:
     {

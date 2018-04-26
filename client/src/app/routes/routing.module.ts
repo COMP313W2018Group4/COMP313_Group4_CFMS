@@ -10,8 +10,8 @@ const appRoutes: Routes =
 [
     { path: 'home', component: HomeComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'customer/dashboard', component: DashboardCustomerComponent},
-    { path: 'customer/new-feedback', component: NewFeedbackComponent},
+    { path: 'customer-dashboard', component: DashboardCustomerComponent},
+    { path: 'new-feedback', component: NewFeedbackComponent},
     { path: '**', component: HomeComponent},
 ];
 

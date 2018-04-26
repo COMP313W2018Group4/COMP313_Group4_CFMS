@@ -49,7 +49,7 @@ export class NavbarComponent implements OnInit {
           this.user= res.userId;
           this.firstName= res.firstName;
           sessionStorage.setItem('userId', res.userId);
-          this.router.navigate(['customer/dashboard']); // Navigate to dashboard view
+          this.router.navigate(['customer-dashboard']); // Navigate to dashboard view
         }
         else
         {

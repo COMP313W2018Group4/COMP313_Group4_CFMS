@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DashboardCustomerComponent } from './components/customer/dashboard-customer/dashboard-customer.component';
+import { NewFeedbackComponent } from './components/customer/feedback/new-feedback/new-feedback.component';
+import { ListFeedbackComponent } from './components/customer/feedback/list-feedback/list-feedback.component';
 
 import { AccountService } from './services/account.service';
 import { FeedbackService } from "./services/feedback.service";
 import { AdminService } from "./services/admin.service";
-import { DashboardCustomerComponent } from './components/customer/dashboard-customer/dashboard-customer.component';
-import { NewFeedbackComponent } from './components/customer/feedback/new-feedback/new-feedback.component';
+
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { NewFeedbackComponent } from './components/customer/feedback/new-feedbac
     HomeComponent,
     RegisterComponent,
     DashboardCustomerComponent,
-    NewFeedbackComponent
+    NewFeedbackComponent,
+    ListFeedbackComponent
   ],
   imports: [
     BrowserModule,

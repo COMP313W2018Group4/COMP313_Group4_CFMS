@@ -15,4 +15,10 @@ router.post('/feedback', customerController.createFeedback);
 //Get all feedback count
 router.post('/all-feedback-count/:id', customerController.getAllFeedbackCount);
 
+//Get current feedback count
+router.post('/current-feedback-count/:id', customerController.getCurrentFeedbackCount);
+
+//Get all feedback by user
+router.post('/all-feedback/:id', customerController.getAllFeedback);
+
 module.exports=router;

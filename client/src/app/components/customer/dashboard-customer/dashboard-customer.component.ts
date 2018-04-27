@@ -10,12 +10,14 @@ import { FeedbackService } from "../../../services/feedback.service";
 export class DashboardCustomerComponent implements OnInit
 {
   allFeedCount;
+  currentFeedCount;
   user;
 
   constructor( private router: Router, private feedbackService: FeedbackService)
   {
     this.user= sessionStorage.getItem('userId');
     this.getAllFeedbackCount();
+    this.getCurrentFeedbackCount();
   }
 
   getAllFeedbackCount()
@@ -30,6 +32,21 @@ export class DashboardCustomerComponent implements OnInit
         this.allFeedCount= 0;
       }
     })
+  }
+
+  getCurrentFeedbackCount()
+  {
+    this.feedbackService.getCurrentFeedbackCount(this.user).subscribe(res=>
+    {
+      if(res.count)
+      {
+        this.currentFeedCount= res.count;
+      }
+      if (res.empty)
+      {
+        this.currentFeedCount= 0;
+      }
+    });
   }
 
   ngOnInit() {

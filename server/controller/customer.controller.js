@@ -47,6 +47,49 @@ const getAllFeedbackCount= function(req, res)
         }
 
     })
+};
+
+const getCurrentFeedbackCount= function(req, res)
+{
+    feedbackModel.count({'userId': req.params.id}, function (err, countObj)
+    {
+        if (err)
+        {
+            console.log(err);
+            res.json({'error':err});
+        }
+        if (!countObj)
+        {
+            console.log("No feedback count found");
+            res.json({'empty': "No feedback count"});
+        }
+        else
+        {
+            res.json({'count': countObj});
+        }
+
+    })
+};
+
+const getAllFeedback= function(req, res)
+{
+    feedbackModel.find({'userId': req.params.id}, function (err, feedbackObj)
+    {
+        if (err)
+        {
+            console.log(err);
+            res.json({'error':err});
+        }
+        if (!feedbackObj)
+        {
+            console.log("No feedback found");
+            res.json({'empty': "No feedback"});
+        }
+        else
+        {
+            res.json({'feedback': feedbackObj});
+        }
+    })
 }
 
-module.exports= {"createFeedback": createFeedback,"getAllFeedbackCount": getAllFeedbackCount};
+module.exports= {"createFeedback": createFeedback,"getAllFeedbackCount": getAllFeedbackCount, "getCurrentFeedbackCount": getCurrentFeedbackCount, "getAllFeedback": getAllFeedback};

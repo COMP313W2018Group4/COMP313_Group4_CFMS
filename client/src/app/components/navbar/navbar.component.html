@@ -9,32 +9,32 @@
     <!--Menu-->
     <ul class="nav navbar-nav navbar-right" id="nav">
       <!--Navbar menu items visible based on displayed page-->
-      <div>
+      <div class="mar-left10 mar-right10">
         <li class="nav-item">
           <a class="nav-link" routerLink="/home" routerLinkActive="active-link">Home</a>
         </li>
       </div>
 
-      <div *ngIf="user">
+      <div *ngIf="user" class="mar-left10 mar-right10">
         <li class="nav-item">
           <a class="nav-link" routerLink="/customer-dashboard" routerLinkActive="active-link">Dashboard</a>
         </li>
       </div>
 
-      <div *ngIf="user">
+      <div *ngIf="user" class="mar-left10 mar-right10">
         <li class="nav-item">
           <a class="nav-link" href="" routerLinkActive="active-link" data-toggle="tooltip" title="Profile"><i class="fas fa-user mar-right10"></i>{{firstName}}</a>
         </li>
       </div>
 
-      <div *ngIf="user">
+      <div *ngIf="user" class="mar-left10">
         <li class="nav-item">
 
           <a class="nav-link" href="" routerLinkActive="active-link"><i class="fas fa-sign-out-alt mar-right10"></i>Logout</a>
         </li>
       </div>
 
-      <div *ngIf="!user">
+      <div *ngIf="!user" class="mar-left10">
         <!--Login Dropdown (includes form)-->
         <li class="dropdown nav-item">
           <a class="dropdown-toggle nav-link " data-toggle="dropdown" href="">Log in<span class="caret"></span></a>

@@ -1,7 +1,7 @@
-<div class="container ">
-  <div class="row mar-top200">
+<div class="container overflow-visible">
+  <div class="row overflow-visible mar-top200">
     <!--New feedback-->
-    <div class="col-sm-4 offset-1">
+    <div class="col-sm-4 offset-2">
       <div class="cust-widget well well-sm">
         <div class="icon">
           <i class="fas fa-comments"></i>
@@ -11,16 +11,17 @@
         </div>
         <div class="text">
           <h1 class="display-4">{{allFeedCount}}</h1>
-          <h3 class="text-uppercase font-weight-light">Lifetime Feedback</h3>
+          <h3 class="text-uppercase font-weight-light">Total Feedback</h3>
         </div>
         <div class="cust-widget-button mar-top30 text-center ">
-         <a class="text-white text-uppercase font-large" style="display:block; width: 100%; height: 100%" routerLink="/new-feedback"> <i class="fas fa-comment fa-lg mar-right10 text-white"></i>New Feedback</a>
+         <a class="text-white text-uppercase font-large" style="display:block; width: 100%; height: 100%" routerLink="/new-feedback">
+           <i class="fas fa-comment fa-lg mar-right10 text-white"></i>New Feedback</a>
         </div>
       </div>
     </div>
     <!--end new feedback-->
     <!--View Feedbacks-->
-    <div class="col-sm-4 offset-2">
+    <div class="col-sm-4 ">
       <div class="cust-widget well well-sm">
         <div class="icon">
           <i class="fas fa-list-ul"></i>
@@ -29,11 +30,12 @@
           <hr class="white-divider">
         </div>
         <div class="text">
-          <h1 class="display-4">5</h1>
+          <h1 class="display-4">{{currentFeedCount}}</h1>
           <h3 class="text-uppercase font-weight-light">Current Feedback</h3>
         </div>
         <div class="cust-widget-button mar-top30 text-center ">
-         <a class="text-white text-uppercase font-large"  style="display:block; width: 100%; height: 100%"> <i class="fas fa-eye fa-lg mar-right10 text-white"></i>View Feedback</a>
+         <a class="text-white text-uppercase font-large"  style="display:block; width: 100%; height: 100%" routerLink="/list-feedback">
+           <i class="fas fa-eye fa-lg mar-right10 text-white"></i>View Feedback</a>
         </div>
       </div>
     </div>

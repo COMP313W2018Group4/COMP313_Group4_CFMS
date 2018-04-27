@@ -31,4 +31,26 @@ export class FeedbackService {
     };
     return this.http.post('customer/all-feedback-count/'+ userId, httpOptions).map(res=> {return res});
   }
+
+  getCurrentFeedbackCount(userId:string):Observable<any>
+  {
+    const httpOptions = {headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'responseType': 'application/json'
+      })
+    };
+    return this.http.post('customer/current-feedback-count/'+ userId, httpOptions).map(res=> {return res});
+  }
+
+  getCustomerFeedback(userId:string):Observable<any>
+  {
+    const httpOptions = {headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'responseType': 'application/json'
+      })
+    };
+    return this.http.post('customer/all-feedback/'+ userId, httpOptions).map(res=> {return res});
+  }
 }

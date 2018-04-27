@@ -1,11 +1,15 @@
-<main class="container mar-top200 mar-bot40">
-  <div class="col-lg-12 mar-bot30">
+<main class="container mar-top100 mar-bot40">
+
+  <button type="button" class="btn btn-link" routerLink="/customer-dashboard">< Dashboard</button>
+  <button type="button" class="btn btn-link float-right" routerLink="/list-feedback">Feedback List ></button>
+
+  <div class="col-lg-12 mar-top50 mar-bot30">
     <h1 class="display-4 text-center">New Feedback</h1>
     <hr>
   </div>
 
   <div *ngIf="message">
-    <div class="alert alert-primary col-lg-8 offset-2 alert-dismissible" role="alert">
+    <div class="alert alert-success col-lg-8 offset-2 alert-dismissible" role="alert">
       <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
       Your feedback has been submitted. Hold tight, out team will contact you soon.
     </div>
@@ -90,7 +94,7 @@
   </div>
 
     <div class="col-lg-12">
-      <button type="submit" class="btn btn-primary btn-lg btn-block text-uppercase col-lg-6 offset-3 mar-top60 signupBtn" [disabled]="!feedbackForm.valid">Submit Feedback</button>
+      <button type="submit" class="btn btn-primary btn-lg btn-block text-uppercase col-lg-4 offset-4 mar-top60 signupBtn" [disabled]="!feedbackForm.valid">Submit Feedback</button>
     </div>
 
   </form>

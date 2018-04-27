@@ -60,7 +60,6 @@ a:hover {
   font-weight: 300;
 }
 
-
 .blink:hover {
   opacity: 0.9;
 }
@@ -72,10 +71,6 @@ a:hover {
 .no-offset {
   margin: 0 !important;
   padding: 0;
-}
-
-.content,.container {
-  overflow: hidden;
 }
 
 .trans {
@@ -111,6 +106,14 @@ a:hover {
   background-color: white;
 }
 
+.overflow-visible
+{
+  overflow: visible;
+}
+
+.font-Xlarge{
+  font-size: x-large;
+}
 /* --- align --- */
 .align-left {
   text-align: left;
@@ -199,6 +202,7 @@ a:hover {
 
 /* top */
 .mar-top0 {margin-top: 0;}
+.mar-top3 {margin-top: 3px;}
 .mar-top5 {margin-top: 5px;}
 .mar-top10 {margin-top: 10px;}
 .mar-top15 {margin-top: 15px;}
@@ -445,6 +449,7 @@ section.section {
   text-align: center;
   padding-top: 20px;
   background-color: #4c4c4c;
+  box-shadow: 0px 4px 19px 2px #888888;
 }
 .cust-widget .icon
 {
@@ -484,3 +489,27 @@ section.section {
   background-color: #0588cb7a;
 }
 
+/* ========================================
+	Feedback List
+========================================= */
+
+/*.table td.text {
+  max-width: 177px;
+}
+.table td.text span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+}*/
+
+.table {
+  table-layout:fixed;
+}
+
+.table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

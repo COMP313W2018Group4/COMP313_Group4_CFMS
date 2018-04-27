@@ -36,7 +36,7 @@
           <td>{{feed.company}}</td>
           <td class="text">{{feed.feedback}}</td>
           <td class="text-center">
-            <button type="button" class="btn btn-link">View</button>
+            <button type="button" class="btn btn-link" (click)="viewFeedback(feed._id)">View</button>
           </td>
         </tr>
       </tbody>

@@ -18,6 +18,12 @@ router.post('/all-feedback-count/:id', customerController.getAllFeedbackCount);
 //Get current feedback count
 router.post('/current-feedback-count/:id', customerController.getCurrentFeedbackCount);
 
+//View feedback details
+router.post('/view-feedback/:id', customerController.viewFeedback);
+
+//Delete feedback
+router.post('/delete-feedback/:id', customerController.deleteFeedback);
+
 //Get all feedback by user
 router.post('/all-feedback/:id', customerController.getAllFeedback);
 

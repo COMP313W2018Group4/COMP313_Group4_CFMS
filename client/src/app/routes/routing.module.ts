@@ -6,6 +6,7 @@ import { RegisterComponent } from "../components/register/register.component";
 import { DashboardCustomerComponent } from "../components/customer/dashboard-customer/dashboard-customer.component";
 import { NewFeedbackComponent } from "../components/customer/feedback/new-feedback/new-feedback.component";
 import { ListFeedbackComponent } from "../components/customer/feedback/list-feedback/list-feedback.component";
+import { DetailsFeedbackComponent} from "../components/customer/feedback/details-feedback/details-feedback.component";
 
 const appRoutes: Routes =
 [
@@ -14,6 +15,7 @@ const appRoutes: Routes =
     { path: 'customer-dashboard', component: DashboardCustomerComponent},
     { path: 'new-feedback', component: NewFeedbackComponent},
     { path: 'list-feedback', component: ListFeedbackComponent},
+    { path: 'detail-feedback', component: DetailsFeedbackComponent},
     { path: '**', component: HomeComponent},
 ];
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Feedback } from "../../../../models/feedback";
 import { FeedbackService } from "../../../../services/feedback.service";
 import { AccountService } from "../../../../services/account.service";
 import { AdminService } from "../../../../services/admin.service";
@@ -20,8 +19,7 @@ export class ListFeedbackComponent implements OnInit {
 
   constructor(private router: Router,
     private feedbackService: FeedbackService,
-    private accountService: AccountService,
-    private adminService: AdminService
+    private accountService: AccountService
   )
   {
     this.user= sessionStorage.getItem('userId');
@@ -60,6 +58,12 @@ export class ListFeedbackComponent implements OnInit {
           this.message= "No feedback found";
         }
     })
+  }
+
+  viewFeedback(feedId: string)
+  {
+    sessionStorage.setItem('feedbackId', feedId);
+    this.router.navigate(['detail-feedback']); // Navigate to dashboard view
   }
   ngOnInit() {
   }

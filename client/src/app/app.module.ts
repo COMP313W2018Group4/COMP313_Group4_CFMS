@@ -15,6 +15,7 @@ import { ListFeedbackComponent } from './components/customer/feedback/list-feedb
 import { AccountService } from './services/account.service';
 import { FeedbackService } from "./services/feedback.service";
 import { AdminService } from "./services/admin.service";
+import { DetailsFeedbackComponent } from './components/customer/feedback/details-feedback/details-feedback.component';
 
 
 
@@ -26,7 +27,8 @@ import { AdminService } from "./services/admin.service";
     RegisterComponent,
     DashboardCustomerComponent,
     NewFeedbackComponent,
-    ListFeedbackComponent
+    ListFeedbackComponent,
+    DetailsFeedbackComponent
   ],
   imports: [
     BrowserModule,

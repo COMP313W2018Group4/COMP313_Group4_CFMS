@@ -90,6 +90,53 @@ const getAllFeedback= function(req, res)
             res.json({'feedback': feedbackObj});
         }
     })
-}
+};
 
-module.exports= {"createFeedback": createFeedback,"getAllFeedbackCount": getAllFeedbackCount, "getCurrentFeedbackCount": getCurrentFeedbackCount, "getAllFeedback": getAllFeedback};
+const viewFeedback= function(req, res)
+{
+    feedbackModel.findById({'_id': req.params.id}, function (err, feedbackDetailsObj)
+    {
+        if (err)
+        {
+            console.log(err);
+            res.json({'error':err});
+        }
+        if (!feedbackDetailsObj)
+        {
+            console.log("No feedback found");
+            res.json({'empty': "No feedback"});
+        }
+        else
+        {
+            res.json({'feedback': feedbackDetailsObj._id, 'date': feedbackDetailsObj.date,
+                'company': feedbackDetailsObj.company, 'comment': feedbackDetailsObj.feedback});
+        }
+    })
+};
+
+const deleteFeedback= function(req, res)
+{
+    feedbackModel.remove({'_id': req.params.id}, function (err, feedbackObj)
+    {
+        if (err)
+        {
+            console.log(err);
+            res.json({'error':err});
+        }
+        if (!feedbackObj)
+        {
+            console.log("No feedback deleted");
+            res.json({'empty': "No feedback deleted"});
+        }
+        else
+        {
+            res.json({'feedback': feedbackObj});
+        }
+    })
+};
+
+
+
+module.exports= {"createFeedback": createFeedback,"getAllFeedbackCount": getAllFeedbackCount,
+    "getCurrentFeedbackCount": getCurrentFeedbackCount, "getAllFeedback": getAllFeedback,
+    "viewFeedback": viewFeedback, "deleteFeedback": deleteFeedback};

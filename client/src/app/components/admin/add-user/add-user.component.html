@@ -1,0 +1,118 @@
+<main class="container mar-top100">
+
+  <button type="button" class="btn btn-link" routerLink="/admin-dashboard">< Dashboard</button>
+  <button type="button" class="btn btn-link float-right" routerLink="/user-list">User List ></button>
+
+  <!--<div class="container mar-top30 text-secondary">-->
+    <!--<div class="row">-->
+      <!--<div class="col-lg-12">-->
+        <!--<i class="fas fa-user fa-lg float-left mar-right10 font-Xlarge"></i>-->
+        <!--<h4 class="text-uppercase font-weight-light">{{firstName}}Admin</h4>-->
+      <!--</div>-->
+
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col">-->
+        <!--<i class="fas fa-envelope fa-lg float-left mar-right10 mar-top3 font-Xlarge"></i>-->
+        <!--<h4 class="text-uppercase font-weight-light">{{email}}admin@cfms.com</h4>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <div class="col-lg-12 mar-top50 mar-bot30">
+    <h1 class="display-4 text-center">User Registration</h1>
+    <hr>
+  </div>
+
+  <div *ngIf="message">
+    <div class="alert alert-primary col-lg-6 offset-3 alert-dismissible" role="alert">
+      <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
+        User added successfully.
+    </div>
+  </div>
+
+  <div *ngIf="errorMessage">
+    <div class="alert alert-danger col-lg-6 offset-3 alert-dismissible" role="alert">
+      <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
+        Could not add user. Please try again.
+    </div>
+  </div>
+
+  <form class="form signUpForm" [formGroup]="form"  #userForm="ngForm" (ngSubmit)="registerUser()">
+
+    <div class="form-group col-lg-6 offset-3">
+      <label class="cols-sm-2 control-label">First Name</label>
+      <div class="input-group ">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+        </div>
+        <input type="text" class="form-control formInput" formControlName="firstName" placeholder="Enter your first name" required autofocus />
+      </div>
+      <div *ngIf="!form.controls['firstName'].valid && form.controls['firstName'].touched">
+        <p class="form-text text-danger">
+          First name is required and must be more than 3 characters
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group col-lg-6 offset-3">
+      <label class="cols-sm-2 control-label">Last Name</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+        </div>
+        <input type="text" class="form-control formInput"  formControlName="lastName" placeholder="Enter your last name" required/>
+      </div>
+      <div *ngIf="!form.controls['lastName'].valid && form.controls['lastName'].touched">
+        <p class="form-text text-danger">
+          Last name is required and must be more than 3 characters
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group col-lg-6 offset-3">
+      <label class="cols-sm-2 control-label">Email</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+        </div>
+        <input type="email" class="form-control formInput" formControlName="email" placeholder="Enter your email" required/>
+      </div>
+      <div *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
+        <p class="form-text text-danger">
+          Email is required and must match an email address format
+        </p>
+      </div>
+
+    </div>
+
+    <div formGroupName="passwords">
+      <div class="form-group col-lg-6 offset-3">
+        <label class="cols-sm-2 control-label">Password</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+          </div>
+          <input type="password" class="form-control formInput" formControlName="password" placeholder="Enter your password" required />
+        </div>
+      </div>
+
+      <div class="form-group col-lg-6 offset-3">
+        <label class="cols-sm-2 control-label">Confirm Password</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+          </div>
+          <input type="password" class="form-control formInput" formControlName="confirmPass" placeholder="Confirm password" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <button type="submit" class="btn btn-primary btn-lg btn-block text-uppercase col-lg-6 offset-3 mar-top60  signupBtn" [disabled]="!form.valid">Register User</button>
+    </div>
+
+  </form>
+</main>
+
+

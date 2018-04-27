@@ -72,7 +72,7 @@ export class NavbarComponent implements OnInit {
   {
     sessionStorage.clear();
     this.accountService.logout().subscribe(res =>res);
-    sessionStorage.setItem('userStatus', "loggedOut");
+    this.router.navigate(['/']); // Navigate to dashboard view
   }
 
   ngOnInit()

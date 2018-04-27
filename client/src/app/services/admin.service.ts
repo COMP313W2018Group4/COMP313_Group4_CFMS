@@ -32,4 +32,26 @@ export class AdminService {
     return this.http.post('admin/total-user-count/', httpOptions).map(res=> {return res;});
   }
 
+  getAllUser():Observable<any>
+  {
+    const httpOptions = {headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'responseType': 'application/json'
+      })
+    };
+    return this.http.post('admin/all-user/', httpOptions).map(res=> {return res;});
+  }
+
+  getUserDetails(userId:string):Observable<any>
+  {
+    const httpOptions = {headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'responseType': 'application/json'
+      })
+    };
+    return this.http.post('admin/user-details/'+ userId, httpOptions).map(res=> {return res;});
+  }
+
 }

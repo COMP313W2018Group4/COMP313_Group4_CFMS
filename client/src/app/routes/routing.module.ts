@@ -8,7 +8,8 @@ import { NewFeedbackComponent } from "../components/customer/feedback/new-feedba
 import { ListFeedbackComponent } from "../components/customer/feedback/list-feedback/list-feedback.component";
 import { DetailsFeedbackComponent} from "../components/customer/feedback/details-feedback/details-feedback.component";
 import { DashboardAdminComponent } from "../components/admin/dashboard-admin/dashboard-admin.component";
-
+import { AddUserComponent } from "../components/admin/add-user/add-user.component";
+import { ListUserComponent } from "../components/admin/list-user/list-user.component";
 
 const appRoutes: Routes =
 [
@@ -21,8 +22,11 @@ const appRoutes: Routes =
     { path: 'detail-feedback', component: DetailsFeedbackComponent},
 
     { path: 'admin-dashboard', component: DashboardAdminComponent},
+    { path: 'add-user', component: AddUserComponent},
+    { path: 'list-user', component: ListUserComponent},
 
-    { path: '**', component: DashboardAdminComponent},
+
+    { path: '**', component: HomeComponent},
 ];
 
 @NgModule({

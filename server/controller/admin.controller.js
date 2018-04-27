@@ -4,7 +4,6 @@ const userModel=require("../model/user.model");
 
 const getAllCompanies = function (req, res)
 {
-    console.log("looking for companies");
     const ret = {};
     companyModel.find({}, function (err, companyObj)
     {
@@ -22,6 +21,51 @@ const getAllCompanies = function (req, res)
         else {
             console.log(companyObj);
             res.json({'companies': companyObj});
+        }
+    })
+
+};
+
+const getAllUser = function (req, res)
+{
+    const ret = {};
+    userModel.find({}, function (err, userObj)
+    {
+        if(err)
+        {
+            ret.msg = err.message;
+            res.json({ ret });
+        }
+        if(!userObj)
+        {
+            ret.msg = "No company found";
+            res.json({ ret });
+        }
+        else {
+            res.json({'users': userObj});
+        }
+    })
+
+};
+
+
+const getUserDetails = function (req, res)
+{
+    const ret = {};
+    userModel.findById(req.params.id, function (err, userObj)
+    {
+        if(err)
+        {
+            ret.msg = err.message;
+            res.json({ ret });
+        }
+        if(!userObj)
+        {
+            ret.msg = "No company found";
+            res.json({ ret });
+        }
+        else {
+            res.json({'user': userId, 'firstName': userObj.firstName,'lastName': userObj.lastName, 'email': userObj.email});
         }
     })
 
@@ -78,4 +122,5 @@ const getTotalUserCount= function(req, res)
 
 module.exports= {"getAllCompanies": getAllCompanies,
     "getTotalFeedbackCount": getTotalFeedbackCount,
-    "getTotalUserCount": getTotalUserCount};
+    "getTotalUserCount": getTotalUserCount, "getUserDetails": getUserDetails,
+    "getAllUser": getAllUser};

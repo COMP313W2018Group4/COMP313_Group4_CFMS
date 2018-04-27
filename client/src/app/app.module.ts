@@ -17,6 +17,8 @@ import { FeedbackService } from "./services/feedback.service";
 import { AdminService } from "./services/admin.service";
 import { DetailsFeedbackComponent } from './components/customer/feedback/details-feedback/details-feedback.component';
 import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
+import { AddUserComponent } from './components/admin/add-user/add-user.component';
+import { ListUserComponent } from './components/admin/list-user/list-user.component';
 
 
 
@@ -30,7 +32,9 @@ import { DashboardAdminComponent } from './components/admin/dashboard-admin/dash
     NewFeedbackComponent,
     ListFeedbackComponent,
     DetailsFeedbackComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    AddUserComponent,
+    ListUserComponent
   ],
   imports: [
     BrowserModule,

@@ -7,16 +7,22 @@ import { DashboardCustomerComponent } from "../components/customer/dashboard-cus
 import { NewFeedbackComponent } from "../components/customer/feedback/new-feedback/new-feedback.component";
 import { ListFeedbackComponent } from "../components/customer/feedback/list-feedback/list-feedback.component";
 import { DetailsFeedbackComponent} from "../components/customer/feedback/details-feedback/details-feedback.component";
+import { DashboardAdminComponent } from "../components/admin/dashboard-admin/dashboard-admin.component";
+
 
 const appRoutes: Routes =
 [
     { path: 'home', component: HomeComponent},
     { path: 'register', component: RegisterComponent},
+
     { path: 'customer-dashboard', component: DashboardCustomerComponent},
     { path: 'new-feedback', component: NewFeedbackComponent},
     { path: 'list-feedback', component: ListFeedbackComponent},
     { path: 'detail-feedback', component: DetailsFeedbackComponent},
-    { path: '**', component: HomeComponent},
+
+    { path: 'admin-dashboard', component: DashboardAdminComponent},
+
+    { path: '**', component: DashboardAdminComponent},
 ];
 
 @NgModule({

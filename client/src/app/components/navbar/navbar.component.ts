@@ -48,8 +48,17 @@ export class NavbarComponent implements OnInit {
         {
           this.user= res.userId;
           this.firstName= res.firstName;
-          sessionStorage.setItem('userId', res.userId);
-          this.router.navigate(['customer-dashboard']); // Navigate to dashboard view
+          if(res.email == "admin@cfms.com")
+          {
+            sessionStorage.setItem('userId', res.userId);
+            this.router.navigate(['admin-dashboard']);
+          }
+          else
+          {
+            sessionStorage.setItem('userId', res.userId);
+            this.router.navigate(['customer-dashboard']); // Navigate to dashboard view
+          }
+
         }
         else
         {

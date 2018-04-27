@@ -1,4 +1,6 @@
 const companyModel=require("../model/company.model");
+const feedbackModel=require("../model/feedback.model");
+const userModel=require("../model/user.model");
 
 const getAllCompanies = function (req, res)
 {
@@ -26,4 +28,54 @@ const getAllCompanies = function (req, res)
 };
 
 
-module.exports= {"getAllCompanies": getAllCompanies,};
+const getTotalFeedbackCount= function(req, res)
+{
+    feedbackModel.count(function (err, countObj)
+    {
+        if (err)
+        {
+            console.log(err);
+            res.json({'error':err});
+        }
+        if (!countObj)
+        {
+            console.log("No feedback count found");
+            res.json({'error': "No feedback count"});
+        }
+        else
+        {
+            res.json({'count': countObj});
+        }
+
+    })
+};
+
+
+const getTotalUserCount= function(req, res)
+{
+    userModel.count(function (err, countObj)
+    {
+        if (err)
+        {
+            console.log(err);
+            res.json({'error':err});
+        }
+        if (!countObj)
+        {
+            console.log("No feedback count found");
+            res.json({'error': "No feedback count"});
+        }
+        else
+        {
+            const ret= countObj-1;
+            console.log(countObj);
+            console.log(ret);
+            res.json({'count': ret});
+        }
+
+    })
+};
+
+module.exports= {"getAllCompanies": getAllCompanies,
+    "getTotalFeedbackCount": getTotalFeedbackCount,
+    "getTotalUserCount": getTotalUserCount};

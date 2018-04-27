@@ -18,7 +18,18 @@ export class AdminService {
         'responseType': 'application/json'
       })
     };
-    return this.http.post('admin/getAllCompanies', httpOptions).map(res=> {return res;});
+    return this.http.post('admin/getAllCompanies/', httpOptions).map(res=> {return res;});
+  }
+
+  getTotalUserCount():Observable<any>
+  {
+    const httpOptions = {headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'responseType': 'application/json'
+      })
+    };
+    return this.http.post('admin/total-user-count/', httpOptions).map(res=> {return res;});
   }
 
 }

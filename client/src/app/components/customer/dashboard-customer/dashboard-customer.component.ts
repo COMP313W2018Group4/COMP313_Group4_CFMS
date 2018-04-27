@@ -16,13 +16,13 @@ export class DashboardCustomerComponent implements OnInit
   constructor( private router: Router, private feedbackService: FeedbackService)
   {
     this.user= sessionStorage.getItem('userId');
-    this.getAllFeedbackCount();
-    this.getCurrentFeedbackCount();
+    this.getAllFeedbackCountByUser();
+    this.getCurrentFeedbackCountByUser();
   }
 
-  getAllFeedbackCount()
+  getAllFeedbackCountByUser()
   {
-    this.feedbackService.getAllFeedbackCount(this.user).subscribe(res=>
+    this.feedbackService.getAllFeedbackCountByUser(this.user).subscribe(res=>
     {
       if(res.count)
       {
@@ -34,9 +34,9 @@ export class DashboardCustomerComponent implements OnInit
     })
   }
 
-  getCurrentFeedbackCount()
+  getCurrentFeedbackCountByUser()
   {
-    this.feedbackService.getCurrentFeedbackCount(this.user).subscribe(res=>
+    this.feedbackService.getCurrentFeedbackCountByUser(this.user).subscribe(res=>
     {
       if(res.count)
       {

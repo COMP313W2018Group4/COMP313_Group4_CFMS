@@ -21,7 +21,7 @@ export class FeedbackService {
     return this.http.post('customer/feedback', feedback, httpOptions).map(res=> {return res});
   }
 
-  getAllFeedbackCount(userId:string):Observable<any>
+  getAllFeedbackCountByUser(userId:string):Observable<any>
   {
     const httpOptions = {headers: new HttpHeaders({
         'Accept': 'application/json',
@@ -32,7 +32,7 @@ export class FeedbackService {
     return this.http.post('customer/all-feedback-count/'+ userId, httpOptions).map(res=> {return res});
   }
 
-  getCurrentFeedbackCount(userId:string):Observable<any>
+  getCurrentFeedbackCountByUser(userId:string):Observable<any>
   {
     const httpOptions = {headers: new HttpHeaders({
         'Accept': 'application/json',
@@ -41,6 +41,17 @@ export class FeedbackService {
       })
     };
     return this.http.post('customer/current-feedback-count/'+ userId, httpOptions).map(res=> {return res});
+  }
+
+  getTotalFeedbackCountAdmin():Observable<any>
+  {
+    const httpOptions = {headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'responseType': 'application/json'
+      })
+    };
+    return this.http.post('admin/total-feedback-count/', httpOptions).map(res=> {return res});
   }
 
   getCustomerFeedback(userId:string):Observable<any>

@@ -58,7 +58,7 @@ const login= function(req, res, next)
             {
                 res.send(err);
             }
-            res.json({'userId': user.id, 'firstName': user.firstName});
+            res.json({'userId': user.id, 'firstName': user.firstName, 'email': user.email});
             console.log(user.email+" has logged in");
         });
 

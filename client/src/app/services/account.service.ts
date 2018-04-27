@@ -66,4 +66,27 @@ export class AccountService
     return this.http.post('customer/current-user/'+ userId, httpOptions).map(res => {return res;});
   }
 
+  updateUser(userId:string, user:User): Observable<any>
+  {
+    const httpOptions = {headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'responseType': 'application/json'
+      })
+    };
+    return this.http.post('account/update-user/'+userId,user, httpOptions).map(res=> {return res;});
+  }
+
+
+  deleteUser(userId:string): Observable<any>
+  {
+    const httpOptions = {headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'responseType': 'application/json'
+      })
+    };
+    return this.http.post('account/delete-user/'+userId, httpOptions).map(res=> {return res;});
+  }
+
 }

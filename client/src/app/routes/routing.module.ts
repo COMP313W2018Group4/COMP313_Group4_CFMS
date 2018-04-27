@@ -10,6 +10,7 @@ import { DetailsFeedbackComponent} from "../components/customer/feedback/details
 import { DashboardAdminComponent } from "../components/admin/dashboard-admin/dashboard-admin.component";
 import { AddUserComponent } from "../components/admin/add-user/add-user.component";
 import { ListUserComponent } from "../components/admin/list-user/list-user.component";
+import { UserDetailsComponent } from "../components/admin/user-details/user-details.component";
 
 const appRoutes: Routes =
 [
@@ -19,11 +20,13 @@ const appRoutes: Routes =
     { path: 'customer-dashboard', component: DashboardCustomerComponent},
     { path: 'new-feedback', component: NewFeedbackComponent},
     { path: 'list-feedback', component: ListFeedbackComponent},
-    { path: 'detail-feedback', component: DetailsFeedbackComponent},
+    { path: 'feedback-details', component: DetailsFeedbackComponent},
 
     { path: 'admin-dashboard', component: DashboardAdminComponent},
     { path: 'add-user', component: AddUserComponent},
     { path: 'list-user', component: ListUserComponent},
+    { path: 'user-details', component: UserDetailsComponent},
+
 
 
     { path: '**', component: HomeComponent},

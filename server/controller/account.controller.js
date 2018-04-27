@@ -16,7 +16,7 @@ const register= function (req, res)
         if (err)
         {
             ret.msg= err.message;
-            console.log(err)
+            console.log(err);
             return res.json({'error': err});
         }
         if (!retObj)
@@ -31,6 +31,46 @@ const register= function (req, res)
         }
     });
 };
+
+/* ===============================================
+    Update user
+  ================================================*/
+const updateUser= function (req, res)
+{
+    const ret = {};
+    console.log(req.body);
+    userModel.findByIdAndUpdate(req.params.id, req.body, {upsert: true},function (err, retUserObj)
+    {
+        if (err)
+        {
+            ret.msg = err.message;
+            res.json(ret);
+        }
+        else {
+            res.json({'user': retUserObj});
+        }
+    })
+};
+
+/* ===============================================
+    Delete user
+  ================================================*/
+const deleteUser= function (req, res)
+{
+    const ret = {};
+    userModel.findByIdAndRemove(req.params.id,function (err, retUserObj)
+    {
+        if (err)
+        {
+            ret.msg = err.message;
+            res.json(ret);
+        }
+        else {
+            res.json({'user': retUserObj});
+        }
+    })
+};
+
 
 /* ===============================================
     Login route, authenticate user
@@ -105,4 +145,5 @@ const logout=function(req, res, next)
 };
 
 
-module.exports= {"register": register, "login": login, "logout": logout, "currentUser": currentUser};
+module.exports= {"register": register, "login": login, "logout": logout, "currentUser": currentUser,
+    "updateUser": updateUser, "deleteUser": deleteUser};

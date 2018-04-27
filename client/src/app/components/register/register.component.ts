@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
   //Register user
   registerUser()
   {
-    const student = new User
+    const user = new User
     (
       this.form.value.firstName,
       this.form.value.lastName,
@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
       this.form.value.passwords.password
     );
 
-    this.accountService.register(student).subscribe(res =>
+    this.accountService.register(user).subscribe(res =>
     {
       if (res.userId)
       {

@@ -65,7 +65,7 @@ const getUserDetails = function (req, res)
             res.json({ ret });
         }
         else {
-            res.json({'user': userId, 'firstName': userObj.firstName,'lastName': userObj.lastName, 'email': userObj.email});
+            res.json({'user': userObj._id, 'firstName': userObj.firstName,'lastName': userObj.lastName, 'email': userObj.email});
         }
     })
 

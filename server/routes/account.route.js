@@ -14,4 +14,10 @@ router.post('/login', accountController.login);
 //Logout
 router.get('/logout', accountController.logout);
 
+//Update
+router.post('/update-user/:id', accountController.updateUser);
+
+//Delete
+router.post('/delete-user/:id', accountController.deleteUser);
+
 module.exports=router;

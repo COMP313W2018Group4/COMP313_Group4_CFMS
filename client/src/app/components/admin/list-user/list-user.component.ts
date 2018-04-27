@@ -25,19 +25,8 @@ export class ListUserComponent implements OnInit {
 
   viewUser(userId:string)
   {
-    /*this.adminService.getUserDetails(userId).subscribe(res=>
-    {
-      if(res.user)
-      {
-
-      }
-      else
-      {
-
-      }
-    })*/
     sessionStorage.setItem('userDetailsId', userId);
-    this.router.navigate(['user-detail']); // Navigate to dashboard view
+    this.router.navigate(['user-details']); // Navigate to dashboard view
   }
 
   getCurrentUser()

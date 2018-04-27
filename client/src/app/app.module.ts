@@ -19,6 +19,7 @@ import { DetailsFeedbackComponent } from './components/customer/feedback/details
 import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
 import { AddUserComponent } from './components/admin/add-user/add-user.component';
 import { ListUserComponent } from './components/admin/list-user/list-user.component';
+import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
 
 
 
@@ -34,7 +35,8 @@ import { ListUserComponent } from './components/admin/list-user/list-user.compon
     DetailsFeedbackComponent,
     DashboardAdminComponent,
     AddUserComponent,
-    ListUserComponent
+    ListUserComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

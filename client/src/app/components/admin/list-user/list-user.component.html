@@ -3,14 +3,14 @@
   <button type="button" class="btn btn-link" routerLink="/admin-dashboard">< Dashboard</button>
   <button type="button" class="btn btn-link float-right" routerLink="/customer-dashboard">Dashboard ></button>
 
-  <div class="mar-top40" *ngIf="message">
+  <div class="mar-top40" *ngIf="userList?.length <=0" >
     <div class="alert alert-primary col-lg-12 alert-dismissible" role="alert">
       <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
-      {{message}}
+          No user found in database. Please try adding a user.
     </div>
   </div>
 
-  <div class="container mar-top20" *ngIf="userList.length >0">
+  <div class="container mar-top20" *ngIf="userList?.length >0">
     <h1 class="display-4 text-center">User List</h1>
     <table class="table table-hover">
       <thead>

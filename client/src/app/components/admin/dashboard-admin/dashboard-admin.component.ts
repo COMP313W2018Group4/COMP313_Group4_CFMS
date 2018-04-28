@@ -13,12 +13,14 @@ export class DashboardAdminComponent implements OnInit
 
   allFeedCount;
   allUserCount;
+  allCompanyCount;
 
   constructor(private router: Router, private feedbackService: FeedbackService,
   private adminService: AdminService)
   {
     this.getAllFeedbackCount();
     this.getTotalUserCount();
+    this.getAllCompanyCount();
   }
 
   ngOnInit() {
@@ -34,6 +36,20 @@ export class DashboardAdminComponent implements OnInit
       }
       else {
         this.allFeedCount= 0;
+      }
+    })
+  }
+
+  getAllCompanyCount()
+  {
+    this.adminService.getTotalCompanyCount().subscribe(res=>
+    {
+      if(res.count)
+      {
+        this.allCompanyCount= res.count;
+      }
+      else {
+        this.allCompanyCount= 0;
       }
     })
   }

@@ -20,7 +20,7 @@ export class UserDetailsComponent implements OnInit {
   message;
 
   constructor(private router: Router,private accountService: AccountService,
-              private adminService: AdminService,private formBuilder: FormBuilder,)
+              private adminService: AdminService,private formBuilder: FormBuilder)
   {
     this.userDetailsId= sessionStorage.getItem('userDetailsId');
     this.getUserDetails();

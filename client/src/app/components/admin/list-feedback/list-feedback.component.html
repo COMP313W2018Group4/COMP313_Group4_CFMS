@@ -2,32 +2,38 @@
 
   <button type="button" class="btn btn-link" routerLink="/admin-dashboard">< Dashboard</button>
 
-  <div class="mar-top40" *ngIf="userList?.length <=0" >
+  <div class="mar-top40" *ngIf="feedbackList?.length <=0" >
     <div class="alert alert-primary col-lg-12 alert-dismissible" role="alert">
       <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
-          No user found in database. Please try adding a user.
+      No feedback found in database
     </div>
   </div>
 
-  <div class="container mar-top20" *ngIf="userList?.length >0">
-    <h1 class="display-4 text-center">User List</h1>
+  <div class="container mar-top20" *ngIf="feedbackList?.length >0">
+    <h1 class="display-4 text-center">Feedback</h1>
     <table class="table table-hover">
       <thead>
       <tr>
         <th scope="col">First Name</th>
         <th scope="col">Last Name</th>
         <th scope="col">Email</th>
+        <th scope="col">Date</th>
+        <th scope="col">Company</th>
+        <th scope="col">Feedback</th>
         <th scope="col" class="text-center"><i class="fa fa-info"></i></th>
       </tr>
       </thead>
       <tbody>
 
-      <tr *ngFor="let user of userList">
-        <td>{{user.firstName}}</td>
-        <td>{{user.lastName}}</td>
-        <td>{{user.email}}</td>
+      <tr *ngFor="let feedback of feedbackList">
+        <td>{{feedback.firstName}}</td>
+        <td>{{feedback.lastName}}</td>
+        <td>{{feedback.email}}</td>
+        <td>{{feedback.date}}</td>
+        <td>{{feedback.company}}</td>
+        <td>{{feedback.feedback}}</td>
         <td class="text-center">
-          <button type="button" class="btn btn-link" (click)="viewUser(user._id)">View</button>
+          <button type="button" class="btn btn-link" (click)="viewFeedback(feedback._id)">View</button>
         </td>
       </tr>
       </tbody>

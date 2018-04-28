@@ -15,15 +15,27 @@
         </li>
       </div>
 
-      <div *ngIf="user" class="mar-left10 mar-right10">
+      <div *ngIf="user && !isAdmin" class="mar-left10 mar-right10">
         <li class="nav-item">
           <a class="nav-link" routerLink="/customer-dashboard" routerLinkActive="active-link">Dashboard</a>
         </li>
       </div>
 
-      <div *ngIf="user" class="mar-left10 mar-right10">
+      <div *ngIf="user && isAdmin" class="mar-left10 mar-right10">
         <li class="nav-item">
-          <a class="nav-link" href="" routerLinkActive="active-link" data-toggle="tooltip" title="Profile"><i class="fas fa-user mar-right10"></i>{{firstName}}</a>
+          <a class="nav-link" routerLink="/admin-dashboard" routerLinkActive="active-link">Dashboard</a>
+        </li>
+      </div>
+
+      <div *ngIf="user && !isAdmin" class="mar-left10 mar-right10">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/customer-dashboard"><i class="fas fa-user mar-right10"></i>{{firstName}}</a>
+        </li>
+      </div>
+
+      <div *ngIf="user && isAdmin" class="mar-left10 mar-right10">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin-dashboard"><i class="fas fa-user mar-right10"></i>{{firstName}}</a>
         </li>
       </div>
 

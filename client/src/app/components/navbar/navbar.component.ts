@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   firstName;
   errorMessage;
   error:boolean;
+  isAdmin;
 
   constructor(private router: Router, private formBuilder: FormBuilder, private accountService: AccountService)
   {
@@ -50,6 +51,7 @@ export class NavbarComponent implements OnInit {
           this.firstName= res.firstName;
           if(res.email == "admin@cfms.com")
           {
+            this.isAdmin= true;
             sessionStorage.setItem('userId', res.userId);
             this.router.navigate(['admin-dashboard']);
           }

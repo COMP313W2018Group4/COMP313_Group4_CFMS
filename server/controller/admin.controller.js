@@ -26,6 +26,78 @@ const getAllCompanies = function (req, res)
 
 };
 
+const getTotalCompanyCount= function(req, res)
+{
+    companyModel.count(function (err, countObj)
+    {
+        if (err)
+        {
+            console.log(err);
+            res.json({'error':err});
+        }
+        if (!countObj)
+        {
+            console.log("No company found");
+            res.json({'error': "No company found"});
+        }
+        else
+        {
+            res.json({'count': countObj});
+        }
+    })
+};
+
+const updateCompany= function(req, res)
+{
+    const ret = {};
+    companyModel.findByIdAndUpdate(req.params.id, req.body, {upsert: true}, function (err, companyObj)
+    {
+        if (err)
+        {
+            ret.msg = err.message;
+            res.json(ret);
+        }
+        else {
+            res.json({'company': companyObj});
+        }
+    })
+};
+
+const addCompany= function(req, res)
+{
+    const ret = {};
+    const company= new companyModel(req.body);
+    company.save( function (err, companyObj)
+    {
+        if (err)
+        {
+            ret.msg = err.message;
+            res.json(ret);
+        }
+        else
+        {
+            res.json({'company': companyObj});
+        }
+    })
+};
+
+const deleteCompany= function(req, res)
+{
+    const ret = {};
+    companyModel.findByIdAndRemove(req.params.id, function (err, companyObj)
+    {
+        if (err)
+        {
+            ret.msg = err.message;
+            res.json(ret);
+        }
+        else
+        {
+            res.json({'company': companyObj});
+        }
+    })
+};
+
 const getAllUser = function (req, res)
 {
     const ret = {};
@@ -48,6 +120,28 @@ const getAllUser = function (req, res)
 
 };
 
+const getAllFeedback = function (req, res)
+{
+    const ret = {};
+    feedbackModel.find({}, function (err, feedbackObj)
+    {
+        if(err)
+        {
+            ret.msg = err.message;
+            res.json({ ret });
+        }
+        if(!feedbackObj)
+        {
+            ret.msg = "No feedback found";
+            res.json({ ret });
+        }
+        else
+        {
+            res.json({'feedback': feedbackObj});
+        }
+    })
+
+};
 
 const getUserDetails = function (req, res)
 {
@@ -71,6 +165,28 @@ const getUserDetails = function (req, res)
 
 };
 
+const getFeedbackDetails = function (req, res)
+{
+    const ret = {};
+    feedbackModel.findById(req.params.id, function (err, feedbackObj)
+    {
+        if(err)
+        {
+            ret.msg = err.message;
+            res.json({ ret });
+        }
+        if(!feedbackObj)
+        {
+            ret.msg = "No feedback found";
+            res.json({ ret });
+        }
+        else {
+            res.json({'feedback': feedbackObj._id, 'firstName': feedbackObj.firstName,'lastName': feedbackObj.lastName, 
+                'email': feedbackObj.email, 'date': feedbackObj.date, 'company': feedbackObj.company, 'comment': feedbackObj.feedback});
+        }
+    })
+
+};
 
 const getTotalFeedbackCount= function(req, res)
 {
@@ -93,7 +209,6 @@ const getTotalFeedbackCount= function(req, res)
 
     })
 };
-
 
 const getTotalUserCount= function(req, res)
 {
@@ -122,5 +237,12 @@ const getTotalUserCount= function(req, res)
 
 module.exports= {"getAllCompanies": getAllCompanies,
     "getTotalFeedbackCount": getTotalFeedbackCount,
-    "getTotalUserCount": getTotalUserCount, "getUserDetails": getUserDetails,
-    "getAllUser": getAllUser};
+    "getTotalUserCount": getTotalUserCount,
+    "getUserDetails": getUserDetails,
+    "getAllUser": getAllUser,
+    "getAllFeedback": getAllFeedback,
+    "getFeedbackDetails": getFeedbackDetails,
+    "getTotalCompanyCount": getTotalCompanyCount,
+    "updateCompany": updateCompany,
+    "addCompany": addCompany,
+    "deleteCompany": deleteCompany};

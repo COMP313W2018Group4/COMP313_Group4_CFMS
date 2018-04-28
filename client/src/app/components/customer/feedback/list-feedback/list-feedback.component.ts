@@ -63,7 +63,7 @@ export class ListFeedbackComponent implements OnInit {
   viewFeedback(feedId: string)
   {
     sessionStorage.setItem('feedbackId', feedId);
-    this.router.navigate(['detail-feedback']); // Navigate to dashboard view
+    this.router.navigate(['feedback-details']); // Navigate to dashboard view
   }
   ngOnInit() {
   }

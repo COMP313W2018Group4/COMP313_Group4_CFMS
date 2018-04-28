@@ -20,7 +20,9 @@ import { DashboardAdminComponent } from './components/admin/dashboard-admin/dash
 import { AddUserComponent } from './components/admin/add-user/add-user.component';
 import { ListUserComponent } from './components/admin/list-user/list-user.component';
 import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
-
+import  { ListAdminFeedbackComponent } from "./components/admin/list-feedback/list-feedback.component";
+import { FeedbackDetailsComponent } from './components/admin/feedback-details/feedback-details.component';
+import { CompaniesComponent } from './components/admin/companies/companies.component';
 
 
 @NgModule({
@@ -36,7 +38,10 @@ import { UserDetailsComponent } from './components/admin/user-details/user-detai
     DashboardAdminComponent,
     AddUserComponent,
     ListUserComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    ListAdminFeedbackComponent,
+    FeedbackDetailsComponent,
+    CompaniesComponent
   ],
   imports: [
     BrowserModule,

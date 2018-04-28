@@ -1,7 +1,7 @@
 <div class="container overflow-visible">
   <div class="row overflow-visible mar-top200">
-    <!--New feedback-->
-    <div class="col-sm-4 offset-2">
+    <!--New User-->
+    <div class="col-sm-3 mar-left100">
       <div class="cust-widget well well-sm">
         <div class="icon">
           <i class="fas fa-users"></i>
@@ -15,17 +15,37 @@
         </div>
         <div class="cust-widget-button mar-top30">
           <a class="text-white text-uppercase font-large" style="display:block; width: 100%; height: 100%" routerLink="/add-user">
-            <i class="fas fa-user-plus mar-right10 text-white"></i>Create New User</a>
+            <i class="fas fa-user-plus mar-right10 text-white"></i>New User</a>
         </div>
         <div class="cust-widget-button2 ">
           <a class="text-white text-uppercase font-large" style="display:block; width: 100%; height: 100%" routerLink="/list-user">
-            <i class="fas fa-list mar-right10 text-white"></i>User list</a>
+            <i class="fas fa-cogs mar-right10 text-white"></i>Manage User</a>
         </div>
       </div>
     </div>
-    <!--end new feedback-->
+    <!--end new user-->
+    <!--View Companies-->
+    <div class="col-sm-3 mar-left50">
+      <div class="cust-widget well well-sm">
+        <div class="icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <div class="container">
+          <hr class="white-divider">
+        </div>
+        <div class="text">
+          <h1 class="display-4">{{allCompanyCount}}</h1>
+          <h3 class="text-uppercase font-weight-light">Companies</h3>
+        </div>
+        <div class="cust-widget-button mar-top30">
+          <a class="text-white text-uppercase font-large"  style="display:block; width: 100%; height: 100%" routerLink="/companies">
+            <i class="fas fa-cogs fa-lg mar-right10 text-white"></i>Manage Companies</a>
+        </div>
+      </div>
+    </div>
+    <!--end view companies-->
     <!--View Feedbacks-->
-    <div class="col-sm-4 ">
+    <div class="col-sm-3 mar-left50">
       <div class="cust-widget well well-sm">
         <div class="icon">
           <i class="fas fa-list-ul"></i>
@@ -37,13 +57,14 @@
           <h1 class="display-4">{{allFeedCount}}</h1>
           <h3 class="text-uppercase font-weight-light">Feedback</h3>
         </div>
-        <div class="cust-widget-button mar-top30 text-center ">
-          <a class="text-white text-uppercase font-large"  style="display:block; width: 100%; height: 100%" routerLink="/list-feedback">
-            <i class="fas fa-list fa-lg mar-right10 text-white"></i>Feedback List</a>
+        <div class="cust-widget-button mar-top30">
+          <a class="text-white text-uppercase font-large"  style="display:block; width: 100%; height: 100%" routerLink="/list-feedback-admin">
+            <i class="fas fa-cogs fa-lg mar-right10 text-white"></i>Manage Feedback</a>
         </div>
       </div>
     </div>
     <!--end view feedback-->
+
   </div>
   <!--end row-->
 </div>

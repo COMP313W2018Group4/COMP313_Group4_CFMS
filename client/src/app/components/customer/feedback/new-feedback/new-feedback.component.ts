@@ -54,6 +54,9 @@ export class NewFeedbackComponent implements OnInit {
     const feedback= new Feedback
     (
       this.user,
+      this.firstName,
+      this.lastName,
+      this.email,
       this.date,
       this.feedbackForm.value.company,
       this.feedbackForm.value.feedback

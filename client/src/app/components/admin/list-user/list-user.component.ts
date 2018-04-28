@@ -16,7 +16,8 @@ export class ListUserComponent implements OnInit {
   userList;
 
   constructor(private router: Router,
-              private accountService: AccountService, private adminService: AdminService)
+              private accountService: AccountService,
+              private adminService: AdminService)
   {
     this.user= sessionStorage.getItem('userId');
     this.getCurrentUser();

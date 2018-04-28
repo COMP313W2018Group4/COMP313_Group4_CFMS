@@ -1,0 +1,55 @@
+<div class="container mar-top100 mar-bot40">
+
+  <button type="button" class="btn btn-link" routerLink="/admin-dashboard">< Dashboard</button>
+
+ <!-- <div class="mar-top40" *ngIf="userList?.length <=0" >
+    <div class="alert alert-primary col-lg-12 alert-dismissible" role="alert">
+      <a data-dismiss="alert" class="close" aria-label="close">&times;</a>
+      No user found in database. Please try adding a user.
+    </div>
+  </div>-->
+  <h1 class="display-4 text-center">Companies</h1>
+  <hr>
+
+  <form class="form mar-top50" [formGroup]="companyForm" (ngSubmit)="addCompany()">
+    <div class="row">
+      <div class="form-group col-lg-8">
+        <div class="input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-building" aria-hidden="true"></i></span>
+          </div>
+          <input type="text" class="form-control formInput" formControlName="name" placeholder="Enter company name"/>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <button type="submit" class="btn btn-success btn-block" [disabled]="!companyForm.valid"><i class="fas fa-plus mar-right10"></i>Add Company</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="container mar-top20" *ngIf="companyList?.length >0">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Company Name</th>
+        <th scope="col" class="text-center"><i class="fa fa-info"></i></th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let company of companyList">
+        <td>{{company.name}}</td>
+        <td class="text-center">
+         <!-- <button type="button" class="btn btn-link" (click)="updateCompany(company._id)">Update</button>-->
+          <button type="button" class="btn btn-danger" (click)="deleteCompany(company._id)"><i class="fas fa-trash-alt mar-right10"></i>Delete Company</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+</div>
+
+

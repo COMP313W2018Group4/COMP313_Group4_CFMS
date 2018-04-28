@@ -11,6 +11,9 @@ import { DashboardAdminComponent } from "../components/admin/dashboard-admin/das
 import { AddUserComponent } from "../components/admin/add-user/add-user.component";
 import { ListUserComponent } from "../components/admin/list-user/list-user.component";
 import { UserDetailsComponent } from "../components/admin/user-details/user-details.component";
+import { ListAdminFeedbackComponent } from "../components/admin/list-feedback/list-feedback.component";
+import { FeedbackDetailsComponent } from "../components/admin/feedback-details/feedback-details.component";
+import { CompaniesComponent} from "../components/admin/companies/companies.component";
 
 const appRoutes: Routes =
 [
@@ -26,8 +29,9 @@ const appRoutes: Routes =
     { path: 'add-user', component: AddUserComponent},
     { path: 'list-user', component: ListUserComponent},
     { path: 'user-details', component: UserDetailsComponent},
-
-
+    { path: 'list-feedback-admin', component: ListAdminFeedbackComponent},
+    { path: 'feedback-details-admin', component: FeedbackDetailsComponent},
+    { path: 'companies', component: CompaniesComponent},
 
     { path: '**', component: HomeComponent},
 ];

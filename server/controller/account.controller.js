@@ -38,7 +38,6 @@ const register= function (req, res)
 const updateUser= function (req, res)
 {
     const ret = {};
-    console.log(req.body);
     userModel.findByIdAndUpdate(req.params.id, req.body, {upsert: true},function (err, retUserObj)
     {
         if (err)

@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 const mongoose = require ('mongoose');
 const schema = mongoose.Schema;
 
@@ -11,7 +9,7 @@ const companySchema= new schema({
             type:String,
             required: true, /* built in validator  */
             minlength:3 /* built in validator  */
-        },
+        }
     },
     {
         collection: "companies"
